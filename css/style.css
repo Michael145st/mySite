@@ -105,8 +105,8 @@ main {
 }
 footer {display: flex;  width: 100%;  align-items: center;}
 
-.block {display: flex; flex-direction: row; background-color: #252525; height: 7dvh; width: 100%; justify-content: center; color: white;}
-button {font-family: "Poppins"; font-size: 14px;}
+.block {display: flex; flex-direction: row; background-color: #252525; height: 10dvh; width: 100%; justify-content: center; color: white;border: none;}
+button {font-family: "Poppins"; font-size: 14px; border: none;}
 p { font-family: "Nunito", Helvetica, Arial, sans-serif;color: #ffffff; font-size: 15px; }
 h1 {font-family: "Poppins"}
 .block {display: flex;margin-top: 0; vertical-align: middle; align-items: center;}
@@ -160,10 +160,10 @@ h1 {font-family: "Poppins"}
 .selected {background-color: #d83434; scale: 1.3;}
 .portfolio {flex-direction: column; height: min-content; width: 100%; height: 90dvh; background-color: rgb(23, 23, 23); align-items: center;  vertical-align: middle}
 .portfolio .title-red {margin-top: 4dvw; margin-bottom: 0.1dvw; }
-.portfolio-nav-container {width: 100%; flex-direction: row; display: flex; justify-content: space-around; margin: 3dvw; margin-bottom: 6dvw;}
+.portfolio-nav-container {width: 90%; flex-direction: row; display: flex; justify-content: space-around; margin: 3dvw; margin-bottom: 6dvw;}
 .portfolio-nav {width: 20dvw; background-color: #d83434; height: 20dvw; background-image: url(../images/трини.jpg); border-radius: 10px; display: flex; align-items: center; justify-content: space-around; }
 
-.motto {flex-direction: column; height: min-content; width: 100%; background-color: rgb(10, 10, 10); align-items: center;  vertical-align: middle}
+.motto {flex-direction: column; height: min-content; width: 100%; background-color: rgb(16, 16, 16); align-items: center;  vertical-align: middle}
 .motto .service-container {flex-direction: row; margin-top: 1.5dvw; margin-bottom: 6dvw;}
 .motto .service-card {width: 26%; margin-bottom: 0; flex-direction: column; align-items: center;}
 .motto .service-card img {width: 10dvw;}
