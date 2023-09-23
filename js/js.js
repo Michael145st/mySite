@@ -149,7 +149,7 @@ changeSlide(currentIndex);
 
 
     // Получаем ссылки на все обязательные элементы ввода
-    
+   
 	const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageTextarea = document.getElementById('message');
@@ -204,3 +204,37 @@ hireMeButton.addEventListener('click', function () {
     // Используем метод scrollIntoView для плавной прокрутки к блоку "service"
     serviceBlock.scrollIntoView({ behavior: 'smooth' });
 });
+// Получаем кнопку "arrow" по классу
+const arrowButton = document.querySelector('.arrow');
+
+// Добавляем обработчик события клика на кнопку "arrow"
+arrowButton.addEventListener('click', function () {
+    // Используем метод scrollIntoView для плавной прокрутки к началу страницы
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+// Получаем элемент футера по тегу
+const footer = document.querySelector('footer');
+
+// Получаем кнопку "unten" по классу
+const untenButton = document.querySelector('.unten');
+
+// Функция для проверки видимости футера
+function isFooterVisible() {
+    const footerRect = footer.getBoundingClientRect();
+    return footerRect.top < window.innerHeight && footerRect.bottom >= 0;
+}
+
+// Функция для установки класса "active" на кнопке "unten" в зависимости от видимости футера
+function updateUntenButton() {
+    if (isFooterVisible()) {
+        untenButton.classList.add('active');
+    } else {
+        untenButton.classList.remove('active');
+    }
+}
+
+// Добавляем слушатель события прокрутки страницы
+window.addEventListener('scroll', updateUntenButton);
+
+// Устанавливаем начальное состояние кнопки "unten" при загрузке страницы
+updateUntenButton();
