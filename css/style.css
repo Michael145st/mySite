@@ -183,7 +183,7 @@ h1 {font-family: "Poppins"}
 input {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #d83434; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3dvw; padding: 0.4dvw; padding-left: 0.6dvw} 
 textarea {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #d83434; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3dvw; padding: 0.4dvw; width: 100%; }
 input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
-.big {width: 41.5dvw; height: auto; align-content: center ; display: flex; flex-wrap: wrap; margin-left: 2dvw; margin-right: 1dvw;}
+.big {width: 43dvw; height: auto; align-content: center ; display: flex; flex-wrap: wrap; margin-left: 2dvw; margin-right: 1dvw;}
 .contact-container {display: flex; width: 100%; justify-content: space-around; margin-bottom: 3.5%; margin-top: 3.5dvw;}
 .contact img {width: 3dvw; }
 .contact {width: 20dvw; flex-direction: column; display: flex; align-items: center; color: white;  font-family: 'Nunito', sans-serif; font-size: 12px;}
