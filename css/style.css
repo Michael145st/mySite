@@ -49,7 +49,7 @@ overflow: hidden;
  
     margin-top: 10px;
 }
-.unten {font-size: 15px; color: rgba(135, 135, 135, 0.785);}
+.unten {font-size: 15px; color: rgb(135, 135, 135);}
 
 .logo {
    margin-top: 2dvw;
@@ -89,7 +89,7 @@ overflow: hidden;
 }
 
 main {
-    margin-left: 255px; width: calc(100% - 250px); margin-right: 5%;
+    margin-left: 250px; width: calc(100% - 250px); margin-right: 5%;
    margin-top: 0;
    margin-bottom: 0;
     background-color: rgba(118, 118, 118, 0.504);
@@ -99,19 +99,20 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; height: min-content; justify-content: flex-start; margin-right: -2dvw;
+    justify-content: center; height: min-content; justify-content: flex-start;
       
     
 }
 footer {display: flex;  width: 100%;  align-items: center;}
 
-.block {display: flex; flex-direction: row; background-color: #252525; height: 10dvh; width: 100%; justify-content: center; color: white;border: none;}
+.block {display: flex; flex-direction: row; background-color: #252525; height: 9dvh; width: 100%; justify-content: center; color: white;border: none;}
 button {font-family: "Poppins"; font-size: 14px; border: none;}
 p { font-family: "Nunito", Helvetica, Arial, sans-serif;color: #ffffff; font-size: 15px; }
 h1 {font-family: "Poppins"}
 .block {display: flex;margin-top: 0; vertical-align: middle; align-items: center;}
 .title { color: #ffffff; font-family: "Poppins"; font-size: 40px; margin-bottom: 0.5dvw; font-weight:bold; letter-spacing: -1px; width: max-content;}
 .description { font-size: 16px; font-weight: 300; line-height: 1.7; margin:0}
+.unten.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.2; filter: brightness(1.4);}
 
 .home {min-height: 100dvh; width: 100%; background-color: aqua; align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover; }
 .title-red {font-size: 30px; color: #d83434; font-family: 'Nunito', sans-serif; margin-bottom: -2dvw; margin-top: -2dvw;}
@@ -183,7 +184,7 @@ h1 {font-family: "Poppins"}
 input {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #d83434; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3dvw; padding: 0.4dvw; padding-left: 0.6dvw} 
 textarea {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #d83434; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3dvw; padding: 0.4dvw; width: 100%; }
 input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
-.big {width: 43dvw; height: auto; align-content: center ; display: flex; flex-wrap: wrap; margin-left: 2dvw; margin-right: 1dvw;}
+.big {width: 41.5dvw; height: auto; align-content: center ; display: flex; flex-wrap: wrap; margin-left: 2dvw; margin-right: 1dvw;}
 .contact-container {display: flex; width: 100%; justify-content: space-around; margin-bottom: 3.5%; margin-top: 3.5dvw;}
 .contact img {width: 3dvw; }
 .contact {width: 20dvw; flex-direction: column; display: flex; align-items: center; color: white;  font-family: 'Nunito', sans-serif; font-size: 12px;}
@@ -193,4 +194,4 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 .slider-content {display: flex; text-align: center; justify-content: space-evenly; width: 100%; }
 .mana {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
 .send.mana { scale: 1.2; filter: brightness(1.2) ; transition: 0.8s ease; padding: 15px;}
-.arrow {background-color: #00000000; position: absolute; right: 10dvw; color: rgb(255, 255, 255); font-size: 25px; font-weight: 900; border: none;}
+.arrow {background-color: #d83434; position: absolute; right: 10dvw; color: rgb(255, 255, 255); font-size: 25px; font-weight: 900; border: none; border-radius: 4px; justify-content: center; padding: 0.2dvw; width: 2dvw; height: min-content;}
