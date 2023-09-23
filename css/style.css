@@ -89,7 +89,7 @@ overflow: hidden;
 }
 
 main {
-    margin-left: 250px; width: calc(100% - 250px); margin-right: 5%;
+    margin-left: 255px; width: calc(100% - 250px); margin-right: 5%;
    margin-top: 0;
    margin-bottom: 0;
     background-color: rgba(118, 118, 118, 0.504);
