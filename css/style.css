@@ -25,7 +25,7 @@ header {z-index: +100;
     justify-items: center;
     align-items: center;
     
-    border: solid;
+    border: none; border-right: 0.15dvw solid rgb(48, 48, 48);
     justify-content: space-between;
 overflow: hidden;
    
@@ -89,7 +89,7 @@ overflow: hidden;
 }
 
 main {
-    margin-left: 250px; width: calc(100% - 250px); margin-right: 5%;
+    margin-left: 250px; width: calc(100% - 266.5px); margin-right: 5%;
    margin-top: 0;
    margin-bottom: 0;
     background-color: rgba(118, 118, 118, 0.504);
@@ -105,73 +105,77 @@ main {
 }
 footer {display: flex;  width: 100%;  align-items: center;}
 
-.block {display: flex; flex-direction: row; background-color: #252525; height: 9dvh; width: 100%; justify-content: center; color: white;border: none;}
+.block {display: flex; flex-direction: row; background-color: #252525; height: 9dvh; width: 100%; justify-content: center; color: white;border: none; padding-left: 0dvw;}
 button {font-family: "Poppins"; font-size: 14px; border: none;}
-p { font-family: "Nunito", Helvetica, Arial, sans-serif;color: #ffffff; font-size: 15px; }
+p { font-family: "Nunito", Helvetica, Arial, sans-serif;color: #ffffff; font-size: 15px; } 
 h1 {font-family: "Poppins"}
 .block {display: flex;margin-top: 0; vertical-align: middle; align-items: center;}
 .title { color: #ffffff; font-family: "Poppins"; font-size: 40px; margin-bottom: 0.5dvw; font-weight:bold; letter-spacing: -1px; width: max-content;}
 .description { font-size: 16px; font-weight: 300; line-height: 1.7; margin:0}
-.unten.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.2; filter: brightness(1.4);}
+.unten.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.4; filter: brightness(1.8);}
 
-.home {min-height: 100dvh; width: 100%; background-color: aqua; align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover; }
-.title-red {font-size: 30px; color: #d83434; font-family: 'Nunito', sans-serif; margin-bottom: -2dvw; margin-top: -2dvw;}
+.home {min-height: 100dvh; width: 100%; background-color: aqua; align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position-y: center; background-position-x:center; background-size: cover; }
+.title-red {font-size: 35px; color: #84212e; font-family: 'Nunito', sans-serif; margin-bottom: -2dvw; margin-top: -4dvw; letter-spacing: 4px; font-weight: bolder; color: #b82136;}
 .home .title {font-size: 70px; color: white;  font-family: 'Poppins', sans-serif;}
 .home .description {font-size: 18px; color: white;  font-family: 'Poppins', sans-serif; width: 50%; line-height: 1.5; text-align: center; margin-top: 1dvw;}
-.home .down {font-family: 'Nunito', sans-serif; font-size: 18px; padding: 10px;  background-color: #d83434; color: white; border-radius: 5px; border: none; margin-top: 3dvw;} 
-.active {color: rgb(177, 35, 35); scale: 1.1;}
+.home .down {font-family: 'Nunito', sans-serif; font-size: 18px; padding: 10px;  background-color: #84212e; color: white; border-radius: 5px; border: none; margin-top: 3dvw;} 
+.active {color: #84212e; scale: 1.1; filter: brightness(1.3);}
 
 
 .aboutme {flex-direction: column; height: min-content; width: 100%; background-color: rgb(32, 32, 32); align-items: center;  vertical-align: middle}
 .fotos {display: flex; flex-direction: column; margin-top: 3dvw; margin-left: 3dvw; margin-bottom: 3dvw; }
 .foto1 {max-width: 38dvw; border-radius: 10px;}
-.foto2 {width: 16.5dvw; border-radius: 10px; margin-top: -7dvw; margin-left: 25dvw;}
+.foto2 {width: 16.5dvw; border-radius: 10px; margin-top: -7.4dvw; margin-left: 25dvw;}
 .aboutme .description { margin-right: 4.5dvw;  margin-top: 1dvw;}
 .aboutme .title {line-height: 0.8;}
 .info {flex-direction: row; display: flex; } 
 .textcontainer {display: flex; flex-direction: column;   justify-content: space-around; height: min-content; margin: auto; margin-left: 4.5dvw; padding-bottom: 3dvw; } 
-.skills:optional {width: min-content; white-space: nowrap; margin-top: 2dvw; padding: 1.3dvw 2dvw 1.3dvw 2dvw;  background-color: rgba(0, 0, 0, 0); border: 1.5px solid  #d83434; color: white; border-radius: 5px;}
+.skills:optional {width: min-content; white-space: nowrap; margin-top: 2dvw; padding: 1.3dvw 2dvw 1.3dvw 2dvw;  background-color: rgba(0, 0, 0, 0); border: 2px solid  #84212e; color: white; border-radius: 5px;}
 .skills-container {display: none; justify-content: space-between;  margin: 0dvw 5% 0dvw 5%; width: 90%; margin-bottom: 4dvw;}
 .skill {width: 20dvw; justify-content: center; align-items: center; display: flex; flex-direction: column; color: white; font-size: 13px;}
 
 .service {flex-direction: column; height: min-content; width: 100%; background-color: rgb(28, 28, 28); align-items: center;  vertical-align: middle}
 .service .description {width: 60%; text-align: center; margin-top: 1dvw; margin-bottom: 40px; }
 .service .title {margin-top: 4.5dvw;}
-.text-service .title {margin-top: 2%;}
+.text-service .title {margin-top: 2%; letter-spacing: 0.1px;}
 .service-container {display: flex; flex-direction: row; width: 100%; margin-right: 0; flex-wrap: wrap; justify-content: space-evenly; margin-top: 2dvw; margin-bottom: 3dvw;}
-.service-card {width: min-content;  display: flex; flex-direction: row;  width: min-content; justify-content: space-evenly; width: 30dvw; margin-right: 0dvw; margin-bottom: 3dvw;}
+.service-card {width: 25dvw;  display: flex; flex-direction: row;  width: min-content; justify-content: space-evenly; width: 30dvw; margin-right: 0dvw; margin-bottom: 3dvw;}
 .service-card img {width: 12dvw;}
-.text-service {height: min-content; margin: auto; margin-left: 1dvw;}
+.text-service {height: min-content; margin: auto; margin-left: 1dvw; min-width: 20dvw;}
 .text-service .description {width: 100%; text-align: left; margin-top: 0dvw;}
 .text-service .title {font-size: 25px;}
+.service-card img {margin-right: 0.2dvw; filter: brightness(1.05);}
 
-.availabel {height: 20dvw; background-image: url(../images/трини.jpg); width: 100%; background-size: cover; background-attachment: fixed; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.availabel .title {margin-top: 0;}
-.hireme {font-family: 'Nunito', sans-serif; font-size: 18px; padding: 10px;  background-color: #d83434; color: white; border-radius: 5px; border: none;  width: 15dvw; margin-top: 1dvw;}
+.availabel {height: 20dvw; background-image: url(../images/rokk.jpg); width: 100%; background-size: cover; background-attachment: fixed; background-position: bottom; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(rgba(194, 15, 15, 0.5), rgba(195, 17, 17, 0.5)),}
+.availabel .title {margin-top: 0; filter: brightness(1.6) sepia(1.5); }
+.hireme {font-family: 'Nunito', sans-serif; font-size: 18px; padding: 10px;  background-color: #84212e; color: white; border-radius: 5px; border: none;  width: 15dvw; margin-top: 1dvw;}
 
 .reviews {display: flex; flex-direction: column; align-items: center; justify-items: center; width: 100%;}
 .reviews .title {margin-top: 4dvw;}
-.figure {color: #d83434; font-size: 50px; line-height: 0.8;}
+.figure {color: #932635; font-size: 50px; line-height: 0.8; }
 .reviews .portrait {margin-bottom: 2dvw;}
 .reviews .slider-nav-container {margin: 5dvw; margin-top: 3dvw; width: 5dvw; display: flex; justify-content: space-between;}
-.description.nameR {font-size: 13px; margin-top: 2dvw;}
+.description.nameR {font-size: 15px; margin-top: 2dvw; color: #932635; font-weight: bold; }
 .slider-nav {background-color: #f3f3f3; padding: 0.3dvw; border: 0px; border-radius: 0.2dvw;}
 .slider-nav:hover {  border-radius: 0.2dvw; scale: 1.3; filter: brightness(1.3); transition: 0.1s ease;}
 
-.selected {background-color: #d83434; scale: 1.3;}
+.selected {background-color: #84212e; scale: 1.3;}
 .portfolio {flex-direction: column; height: min-content; width: 100%; height: 90dvh; background-color: rgb(23, 23, 23); align-items: center;  vertical-align: middle}
 .portfolio .title-red {margin-top: 4dvw; margin-bottom: 0.1dvw; }
 .portfolio-nav-container {width: 90%; flex-direction: row; display: flex; justify-content: space-around; margin: 3dvw; margin-bottom: 6dvw;}
-.portfolio-nav {width: 20dvw; background-color: #d83434; height: 20dvw; background-image: url(../images/трини.jpg); border-radius: 10px; display: flex; align-items: center; justify-content: space-around; }
-
+.portfolio-nav {width: 20dvw; background-color: #84212e; height: 20dvw; background-image: url(../images/трини.jpg); border-radius: 10px; display: flex; align-items: center; justify-content: space-around; }
+#project1 {background-image: url(../images/api.png); background-size: cover; background-position: center;}
+#project2 {background-image: url(../images/scroll.jpg); background-size: cover; background-position: center;}
+#project3 {background-image: url(../images/shop.png); background-size: cover; background-position: center;}
 .motto {flex-direction: column; height: min-content; width: 100%; background-color: rgb(16, 16, 16); align-items: center;  vertical-align: middle}
 .motto .service-container {flex-direction: row; margin-top: 1.5dvw; margin-bottom: 6dvw;}
 .motto .service-card {width: 26%; margin-bottom: 0; flex-direction: column; align-items: center;}
 .motto .service-card img {width: 10dvw;}
 .motto .text-service {align-items: center;  text-align: center; display: flex; flex-direction: column; margin-left: 0;}
 .motto .description {text-align: center; width: 80%;}
-.motto .title {margin-top: 3dvw;}
+.motto .title {margin-top: 3dvw; margin-bottom: 2dvw;}
 .motto .service-card .title {margin-top: 1dvw;}
+.motto .service-card img {margin-right: 0;  filter: brightness(1.1);}
 
 
 .contactus {flex-direction: column; height: min-content; width: 100%; background-color: rgb(30, 30, 30); align-items: center;  vertical-align: middle; }
@@ -180,9 +184,10 @@ h1 {font-family: "Poppins"}
 .input-container { height: 10dvw; display: flex; justify-content: center; width: 100%; padding-left: 10%; padding-right: 10%; margin-top: 3.5dvw; }
 .small-container {display: flex; height: 10dvw; flex-direction: column; justify-content: space-between; width: 30dvw;}
 
- .send { margin-top: 4dvw; margin-bottom: 1dvw; font-family: 'Nunito', sans-serif; font-size: 18px; padding: 10px;    background-color: #d83434; color: white; border-radius: 5px; border: none;  width: 10dvw;}
-input {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #d83434; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3dvw; padding: 0.4dvw; padding-left: 0.6dvw} 
-textarea {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #d83434; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3dvw; padding: 0.4dvw; width: 100%; }
+ .send { margin-top: 4dvw; margin-bottom: 1dvw; font-family: 'Nunito', sans-serif; font-size: 18px; padding: 10px;    background-color: #84212e; color: white; border-radius: 5px; border: none;  width: 10dvw;}
+input:focus, input:focus-visible, input::selection, input::slotted {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #84212e; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3dvw; padding: 0.4dvw; padding-left: 0.6dvw; column-count:none}
+ input {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #84212e; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1dvw; padding: 0.4dvw; padding-left: 0.6dvw; column-count:none; font-family: 'Nunito', sans-serif; font-weight: bold; } 
+textarea {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1dvw; border-bottom-width: 0.25dvw; border-bottom-color: #84212e; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1dvw; padding: 0.4dvw; width: 100%; font-family: 'Nunito', sans-serif; font-weight: bold; }
 input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
 .big {width: 41.5dvw; height: auto; align-content: center ; display: flex; flex-wrap: wrap; margin-left: 2dvw; margin-right: 1dvw;}
 .contact-container {display: flex; width: 100%; justify-content: space-around; margin-bottom: 3.5%; margin-top: 3.5dvw;}
@@ -194,4 +199,4 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 .slider-content {display: flex; text-align: center; justify-content: space-evenly; width: 100%; }
 .mana {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
 .send.mana { scale: 1.2; filter: brightness(1.2) ; transition: 0.8s ease; padding: 15px;}
-.arrow {background-color: #d83434; position: absolute; right: 10dvw; color: rgb(255, 255, 255); font-size: 25px; font-weight: 900; border: none; border-radius: 4px; justify-content: center; padding: 0.2dvw; width: 2dvw; height: min-content;}
+.arrow {background-color: #84212e; position: absolute; right: 10dvw; color: rgb(255, 255, 255); font-size: 25px; font-weight: 900; border: none; border-radius: 4px; justify-content: center; padding: 0.2dvw; width: 2dvw; height: min-content;}

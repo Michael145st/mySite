@@ -47,11 +47,13 @@ navButtons.forEach((button, index) => {
 // Получаем кнопку "Show my skills" и элемент секции skill-container
 const showSkillsButton = document.querySelector('.skills')
 const skillContainer = document.querySelector('.skills-container')
+const foto2 = document.querySelector(".foto2")
 
 // Добавляем обработчик события на кнопку "Show my skills"
 showSkillsButton.addEventListener('click', function () {
 	// При клике скрываем кнопку
 	showSkillsButton.style.display = 'none'
+    foto2.style.display = "none"
 
 	// Показываем секцию skill-container
 	skillContainer.style.display = 'flex'
