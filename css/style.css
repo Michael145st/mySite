@@ -49,7 +49,7 @@ overflow: hidden;
  
     margin-top: 10px;
 }
-.unten {font-size: 15px; color: rgb(135, 135, 135);}
+.unten {font-size: 15px; color: rgb(74, 74, 74);  filter:grayscale(3)}
 
 .logo {
    margin-top: 2dvw;
@@ -112,7 +112,8 @@ h1 {font-family: "Poppins"}
 .block {display: flex;margin-top: 0; vertical-align: middle; align-items: center;}
 .title { color: #ffffff; font-family: "Poppins"; font-size: 40px; margin-bottom: 0.5dvw; font-weight:bold; letter-spacing: -1px; width: max-content;}
 .description { font-size: 16px; font-weight: 300; line-height: 1.7; margin:0}
-.unten.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.4; filter: brightness(1.8);}
+.unten.active {color: #731d28; transition: 0.5s ease; scale: 1.4; filter: brightness(1.1);}
+
 
 .home {min-height: 100dvh; width: 100%; background-color: aqua; align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position-y: center; background-position-x:center; background-size: cover; }
 .title-red {font-size: 35px; color: #84212e; font-family: 'Nunito', sans-serif; margin-bottom: -2dvw; margin-top: -4dvw; letter-spacing: 4px; font-weight: bolder; color: #b82136;}
@@ -204,8 +205,12 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 .slider-content {display: flex; text-align: center; justify-content: space-evenly; width: 100%; }
 .mana {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
 .send.mana { scale: 1.2; filter: brightness(1.2) ; transition: 0.8s ease; padding: 15px;}
-.arrow {background-color: #84212e; position: absolute; right: 10dvw; color: rgb(255, 255, 255); font-size: 25px; font-weight: 900; border: none; border-radius: 4px; justify-content: center; padding: 0.2dvw; width: 2dvw; height: min-content;}
-   .portfolio-nav {
+.arrow {background-color: #84212e; position: absolute; right: 10dvw; color: rgb(255, 255, 255); font-size: 15px; font-weight: 900; border: none; border-radius: 4px; justify-content: center; padding: 10px; padding-bottom: 5px; width: 2dvw; height: min-content;}
+.b3 {font-size: 0.9dvw;}
+.b3.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.4; filter: brightness(1.5);}
+.arrow.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.4; filter: brightness(1.2) contrast(1.1);}
+
+.portfolio-nav {
             position: relative;
             border: solid 0.7dvw #84212e;
             overflow: hidden;

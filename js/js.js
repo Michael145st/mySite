@@ -219,7 +219,7 @@ const footer = document.querySelector('footer');
 
 // Получаем кнопку "unten" по классу
 const untenButton = document.querySelector('.unten');
-
+const footerText = document.querySelector('.b3')
 // Функция для проверки видимости футера
 function isFooterVisible() {
     const footerRect = footer.getBoundingClientRect();
@@ -230,8 +230,12 @@ function isFooterVisible() {
 function updateUntenButton() {
     if (isFooterVisible()) {
         untenButton.classList.add('active');
+        footerText.classList.add('active')
+        arrowButton.classList.add('active')
     } else {
         untenButton.classList.remove('active');
+        footerText.classList.remove('active')
+        arrowButton.classList.remove('active')
     }
 }
 
