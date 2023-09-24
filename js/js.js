@@ -240,3 +240,4 @@ window.addEventListener('scroll', updateUntenButton);
 
 // Устанавливаем начальное состояние кнопки "unten" при загрузке страницы
 updateUntenButton();
+
