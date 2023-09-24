@@ -168,8 +168,8 @@ h1 {font-family: "Poppins"}
 #project2 {background-image: url(../images/scroll.jpg); background-size: cover; background-position: center;}
 #project3 {background-image: url(../images/shop.png); background-size: cover; background-position: center;}
 .onhover {flex-direction: column;}
-.onhover button {width: 100%; height: 30%; margin-top: 8%; background-color: #84212e;border: none; border-bottom: none; margin: 0; margin-top: 3dvw; font-family: 'Nunito', sans-serif; color: #fff; font-weight: bold;}
-
+.onhover button {width: 100%; height: 30%; margin-top: 3%; background-color: #84212e;border: none; border-bottom: none; margin: 0; margin-top: 3dvw; font-family: 'Nunito', sans-serif; color: #fff; font-weight: bold;}
+.onhover .title {font-size: 25px; margin-bottom: 2dvw; margin-top: 1.5dvw;}
 
 
 .motto {flex-direction: column; height: min-content; width: 100%; background-color: rgb(16, 16, 16); align-items: center;  vertical-align: middle}
@@ -210,9 +210,9 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             border: solid 0.7dvw #84212e;
             overflow: hidden;
         }
-        .background img {width: 100%;}
+        .background img {width: 100%; border: 0;}
 
-         #project1 .background {background-image: url(../images/api.png);  border: none;
+         #project1 .background {background-image: url(../images/api.png);  border: none; 
             width: 100%;
             height: 100%;
            display: flex;
@@ -225,7 +225,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             height: 100%;
             display: flex;
             background-size: cover; background-position: center; background-position-x: left;
-            transition: filter 0.3s, transform 0.3s ease; border: 0;
+            transition: filter 0.3s, transform 0.3s ease; 
         }
 
         #project3 .background {background-image: url(../images/shop.png); background-repeat: no-repeat; border: none;
