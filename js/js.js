@@ -245,3 +245,21 @@ window.addEventListener('scroll', updateUntenButton);
 // Устанавливаем начальное состояние кнопки "unten" при загрузке страницы
 updateUntenButton();
 
+document.addEventListener('DOMContentLoaded', function () {
+	const scrollbarTrack = document.getElementById('scrollbar-track')
+
+	const updateScrollbarColor = () => {
+		const scrollPercentage =
+			(window.scrollY /
+				(document.documentElement.scrollHeight - window.innerHeight)) *
+			100
+		const newColor = `linear-gradient(to bottom, #84212e ${scrollPercentage}%, transparent 0%)`
+
+		scrollbarTrack.style.background = newColor
+		scrollbarTrack.style.opacity = '1' // Показываем элемент
+	}
+
+	window.addEventListener('scroll', updateScrollbarColor)
+	updateScrollbarColor() // Обновляем цвет дорожки скроллбара при загрузке страницы
+})
+

@@ -1,20 +1,66 @@
 .html {overflow-x: hidden; overflow-y: hidden; height: 100dvh; scroll-behavior: smooth;}
 a {text-decoration: none;}
 button {cursor: pointer;}
-body { 
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: rgba(0, 0, 0, 0);
-    overflow-x: hidden;
-    width: 100dvw;
-    left: 0;
-     margin-top: 0; padding-top: 0;  height: 100dvh;
+/* Стили для скроллбара */
+/* Общие стили для скроллбара */
+/* Общие стили для скроллбара */
+/* Стили для основного контейнера */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(48, 48, 48);
+  overflow-y: scroll; /* Включаем вертикальный скролл контейнера */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
+/* Стили для скроллбара */
+body::-webkit-scrollbar {
+  width: 20px; /* Ширина скроллбара */
+  background: transparent; /* Прозрачный фон скроллбара */
+}
+
+/* Стили для фона дорожки скроллбара */
+body::-webkit-scrollbar-track {
+  background: transparent; /* Прозрачный фон дорожки */
+}
+
+/* Стили для "плашки" скроллбара */
+body::-webkit-scrollbar-thumb {
+  background-color: #84212e; /* Цвет "плашки" */
+  border-radius: 2px; /* Закругления "плашки" */
+  border: 2px solid #04040493; /* Граница "плашки" */ width: 5dvw;
+}
+
+/* Стили для собственного элемента дорожки скроллбара */
+body::-webkit-scrollbar-track {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px; /* Ширина дорожки скроллбара */
+  height: 100%; /* Высота дорожки скроллбара, равная высоте окна просмотра */
+  background: #84212e00; /* Начальный цвет дорожки */
+  z-index: 9999; /* Помещаем дорожку скроллбара выше контента */
+}
+
+
+
+#scrollbar-track {
+  position: fixed;
+  top: 42.5%;
+  left: 252px;
+  width: 2px; /* Ширина дорожки скроллбара */
+  height: 28%; /* Высота дорожки скроллбара, равная высоте окна просмотра */
+  background: #84212e00; /* Начальный цвет дорожки */
+  z-index: 9999; /* Помещаем дорожку скроллбара выше контента */
+}
 header {z-index: +100;
     width: 8dvw;
-    width: 250px;
+    width: 252px;
     position: fixed;
     background-color: #252525;
     display: flex;
@@ -25,7 +71,7 @@ header {z-index: +100;
     justify-items: center;
     align-items: center;
     
-    border: none; border-right: 0.15dvw solid rgb(48, 48, 48);
+    border: none; border-right: 0.dvw solid rgb(48, 48, 48);
     justify-content: space-between;
 overflow: hidden;
    
@@ -49,7 +95,7 @@ overflow: hidden;
  
     margin-top: 10px;
 }
-.unten {font-size: 15px; color: rgb(74, 74, 74);  filter:grayscale(3)}
+.unten {font-size: 15px; color: rgb(57, 57, 57);  filter:grayscale(1.6)}
 
 .logo {
    margin-top: 2dvw;
@@ -89,7 +135,7 @@ overflow: hidden;
 }
 
 main {
-    margin-left: 250px; width: calc(100% - 266.5px); margin-right: 5%;
+    margin-left: 255px; width: calc(100% - 256.5px); margin-right: 5%;
    margin-top: 0;
    margin-bottom: 0;
     background-color: rgba(118, 118, 118, 0.504);
@@ -112,11 +158,11 @@ h1 {font-family: "Poppins"}
 .block {display: flex;margin-top: 0; vertical-align: middle; align-items: center;}
 .title { color: #ffffff; font-family: "Poppins"; font-size: 40px; margin-bottom: 0.5dvw; font-weight:bold; letter-spacing: -1px; width: max-content;}
 .description { font-size: 16px; font-weight: 300; line-height: 1.7; margin:0}
-.unten.active {color: #731d28; transition: 0.5s ease; scale: 1.4; filter: brightness(1.1);}
+.unten.active {color: #bababa; transition: 0.5s ease; scale: 1.4; filter: brightness(1.1);}
 
 
 .home {min-height: 100dvh; width: 100%; background-color: aqua; align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position-y: center; background-position-x:center; background-size: cover; }
-.title-red {font-size: 35px; color: #84212e; font-family: 'Nunito', sans-serif; margin-bottom: -2dvw; margin-top: -4dvw; letter-spacing: 4px; font-weight: bolder; color: #b82136;}
+.title-red {font-size: 35px; color: #84212e; font-family: 'Nunito', sans-serif; margin-bottom: -1.5dvw; margin-top: -4dvw; letter-spacing: 4px; font-weight: bolder; color: #b82136;}
 .home .title {font-size: 70px; color: white;  font-family: 'Poppins', sans-serif;}
 .home .description {font-size: 18px; color: white;  font-family: 'Poppins', sans-serif; width: 50%; line-height: 1.5; text-align: center; margin-top: 1dvw;}
 .home .down {font-family: 'Nunito', sans-serif; font-size: 18px; padding: 15px 45px 15px 45px;  background-color: #84212e; color: white; border-radius: 5px; border: none; margin-top: 3dvw; font-weight: bolder;} 
@@ -164,13 +210,13 @@ h1 {font-family: "Poppins"}
 .portfolio {flex-direction: column; height: min-content; width: 100%; height: 90dvh; background-color: rgb(23, 23, 23); align-items: center;  vertical-align: middle}
 .portfolio .title-red {margin-top: 4dvw; margin-bottom: 0.1dvw; }
 .portfolio-nav-container {width: 90%; flex-direction: row; display: flex; justify-content: space-around; margin: 3dvw; margin-bottom: 6dvw;}
-.portfolio-nav {width: 20dvw; background-color: #84212e; height: 20dvw; background-image: url(../images/трини.jpg); border-radius: 20px; display: flex; align-items: center; justify-content: space-around;  }
+.portfolio-nav {width: 20dvw; background-color: #84212e; height: 20dvw; background-image: url(../images/трини.jpg); border-radius: 3dvw; display: flex; align-items: center; justify-content: space-around;  }
 #project1 {background-image: url(../images/api.png); background-size: cover; background-position: center;}
-#project2 {background-image: url(../images/scroll.jpg); background-size: cover; background-position: center;}
+#project2 {background-image: url(../images/scroll.png); background-size: cover; background-position: center;}
 #project3 {background-image: url(../images/shop.png); background-size: cover; background-position: center;}
 .onhover {flex-direction: column;}
 .onhover button {width: 100%; height: 30%; margin-top: 3%; background-color: #84212e;border: none; border-bottom: none; margin: 0; margin-top: 3dvw; font-family: 'Nunito', sans-serif; color: #fff; font-weight: bold;}
-.onhover .title {font-size: 25px; margin-bottom: 2dvw; margin-top: 1.5dvw;}
+.onhover .title {font-size: 25px; margin-bottom: 2dvw; margin-top: 1.5dvw;  color: #a40c20d1;;}
 
 
 .motto {flex-direction: column; height: min-content; width: 100%; background-color: rgb(16, 16, 16); align-items: center;  vertical-align: middle}
@@ -212,12 +258,12 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
 .portfolio-nav {
             position: relative;
-            border: solid 0.7dvw #84212e;
+            border: solid 0.9dvw #84212e;
             overflow: hidden;
         }
         .background img {width: 100%; border: 0;}
 
-         #project1 .background {background-image: url(../images/api.png);  border: none; 
+         #project1 .background {background-image: url(../images/api.png); background-repeat: no-repeat;  border: none; 
             width: 100%;
             height: 100%;
            display: flex;
@@ -247,7 +293,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Затемнение */
+            background-color: rgba(0, 0, 0, 0.822); /* Затемнение */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -259,10 +305,70 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
         .portfolio-nav:hover .background {border: none;
             transition: 0.15s ease;
-            filter: blur(7px); /* Размытие при наведении */
-            transform: scale(1.2); /* Увеличение при наведении (по желанию) */
+            filter: blur(9px); /* Размытие при наведении */
+            transform: scale(1.3); /* Увеличение при наведении (по желанию) */
         }
 
         .portfolio-nav:hover .onhover {border: none;
             opacity: 1; /* Плавное появление при наведении */
+        }
+
+
+
+
+        @media screen and (max-width: 1200px) {
+            
+            button {white-space: nowrap; min-width: min-content;}
+            header {width: 150px; border-right: solid rgb(48, 48, 48) 2px;}
+            .portrait {width: 100px; height: 100px; margin-top: 1dvw;}
+            main {margin-left: 140px; width: calc(100% - 143px); padding-left: -10%;}
+            
+#scrollbar-track {left: 150px; top: 41%; height: 30%;}
+
+            .home {background-position: right;}
+            
+            .info {flex-direction: column;}
+            .textcontainer .description  {margin-right: -10dvw; width: 95%;}
+            .fotos {align-items: center; margin-bottom: -1dvw; margin-top: 6dvw;}
+            .foto1 {max-width: 60dvw; margin-bottom: 3dvw;}
+            .foto2 {margin-top: -11dvw;margin-right: -15dvw; width: 23dvw; margin-bottom: -4dvw;}
+            .skills-container {margin-top: -3dvw; margin-bottom: 6dvw; flex-direction: column; margin-left: 0; align-items: center; }
+            .textcontainer {max-width: 60dvw; margin-top: 1dvw; margin-bottom: 1.5dvw; }
+            .skills:optional {margin-bottom: 5dvw; margin-left: 60%; margin-top: 3dvw; padding: 3dvw;}
+            .skill {font-size: 10px; width: 80%; margin-top: 3dvw; align-items: center; }
+            .skill img {width: 80%; margin-top: -2dvw;}
+            
+            .service .description {width: 80%;}
+            .service-card .description {width: 100%;}
+            .service-card img {width: 20dvw; margin-right: 2dvw;}
+            .reviews .title {margin-top: 6dvw;}
+
+            .reviews .slider-nav-container {width: min-content; margin-top: -1dvw;}
+            .slider-nav {padding: 0.7dvw; margin: 2dvw;}
+            .slider-content .description {width: 80%;}
+
+            .availabel {height: min-content;}
+            .availabel .title {width: 70%; text-align: center; margin-top: 5dvw;}
+            .hireme {margin-bottom: 5dvh; margin-top: 3dvw;}
+
+           .portfolio {height: min-content;}
+            .portfolio-nav-container {flex-direction: column; width: 100%; align-items: center;}
+            .portfolio-nav {height: 30dvw; width: 50dvw; margin-top: 5dvw; background-color: white; background-repeat:no-repeat; background-size: cover;}
+            .portfolio-nav img { padding-left: 12dvw; padding-right: 12dvw;}
+            #project1 img {margin-left: -22%;}
+            #project2 img {margin-left: -2%;}
+            #project3 img {margin-left: -1%;}
+            .service-card {min-width: 60dvw;}
+
+            .motto .service-card {margin-bottom: 5dvw; margin-top: 1dvw;}
+            .motto {padding-top: 2dvw;}
+
+            .contactus {height: min-content;}
+            .small-container {height: 13dvw; width: 65%;}
+            .small {font-size: 15px;}
+            .big {width: 100%; margin-left: 0; margin-top: 5dvw; height: 23dvw; font-size: 15px;}
+            .input-container {flex-direction: column; width: 80%; height: min-content; align-items: center;}
+            .contact {font-size: 10px; }
+            .contact img {width: 5dvw;}
+            .b3 {font-size: 12px;}
         }
