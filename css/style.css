@@ -175,7 +175,7 @@ h1 {font-family: "Poppins"}
 .unten.active {color: #bababa; transition: 0.5s ease; scale: 1.4; filter: brightness(1.1);}
 
 
-.home {min-height: 100vh; width: 100%; background-color: aqua; align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position-y: center; background-position-x:center; background-size: cover; }
+.home {min-height: 100vh; width: 100%; background-color: rgb(31, 31, 31); align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position-y: center; background-position-x:center; background-size: cover; }
 .title-red {font-size: 35px; color: #84212e; font-family: 'Nunito', sans-serif; margin-bottom: -1.5vw; margin-top: -4vw; letter-spacing: 4px; font-weight: bolder; color: #b82136;}
 .home .title {font-size: 70px; color: white;  font-family: 'Poppins', sans-serif;}
 .home .description {font-size: 18px; color: white;  font-family: 'Poppins', sans-serif; width: 50%; line-height: 1.5; text-align: center; margin-top: 1vw;}
@@ -358,7 +358,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         }
 
         .portfolio-nav.open .onhover button {display: flex; align-items: center; align-content: center;}
- .portfolio-nav.open .onhover button h2 {  text-align: center; width: 13%; display: flex; ; color: #84212e; font-size: 1dvw;
+ .portfolio-nav.open .onhover button a {  text-align: center; width: 13%; display: flex; ; color: #84212e; font-size: 1dvw;
     padding: 25px 15px;
     background-color: #1a1a1a;
     border-radius: 50%;
@@ -404,8 +404,8 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
            .portfolio {height: min-content;}
             .portfolio-nav-container {flex-direction: column; width: 100%; align-items: center;}
-            .portfolio-nav {height: 30vw; width: 50vw; margin-top: 5vw; background-color: rgb(68, 68, 68); background-repeat:no-repeat; background-size: cover;}
-            .portfolio-nav img { padding-left: 12vw; padding-right: 12vw;}
+            .portfolio-nav {height: 30vw; width: 50vw; margin-top: 5vw; background-color: #5b5b5b;  pointer-events: auto; background-repeat:no-repeat; background-size: cover;}
+            .portfolio-nav img { padding-left: 12vw; padding-right: 12vw; }
             #project1 img {margin-left: -22%;}
             
             .service-card {min-width: 60vw;}
@@ -429,7 +429,9 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
          @media screen and (max-width: 450px) {
           header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
-        .home {background-position: -120dvw 0; }
+        .home {background-position: -120dvw bottom; background-position: normal;}
+        .home .description {width: 80%;}
+        .home .title {margin-top: 3vh;} 
           .info {width: 100%;}
         .foto1 {max-width: 90vw; width: 90vw; margin-left: -3vw;}
         .foto2 {max-width: 500vw; width: 50vw; margin-bottom: -14vh; margin-top: -10vh;}
@@ -443,9 +445,9 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .service-card .title {font-size: 7vw;}
         .reviews .title {margin-top: 5vh;} .slider-nav {padding: 2vw; margin: 2vw;}
         .portfolio {padding-top: 5vh;}  #project1 img {margin-left: 0%;}
-        .portfolio-nav {height: 20vh; width: 80wv; min-width: 80vw; }
-        .portfolio-nav.open {height: 45vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
-        .portfolio-nav.open .onhover button h2  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 3; text-align: center; justify-content: space-around;}
+        .portfolio-nav {height: 20vh; width: 80wv; min-width: 80vw; } #project1 .background {height: 30vw; width: auto;} #project2 .background {height: 30vw; width: auto;} #project3 .background {height: 30vw; width: auto;}
+        .portfolio-nav.open {height: 65vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
+        .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 3; text-align: center; justify-content: space-around;}
         .motto .service-card {flex-direction: column; margin: 5dvw;} 
         .motto .service-card img {position: static; width: 40dvw;}
         .availabel {height: 70vh;}
