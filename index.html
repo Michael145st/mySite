@@ -14,16 +14,16 @@
 </head>
 
 <body>
-    <div id="scrollbar-track"></div>
+    
     <header>
         <div class="logo">
-            <a href=""><img src="../images/3.jpg" alt="portrait" class="portrait"></a>
+            <a href=""><img src="images/3.jpg" alt="portrait" class="portrait"></a>
             <a href=""><h1 class="name">Michael<br>Streltsov</h1></a>
         </div>
-        <div class="nav">
+        <div class="nav"><div id="scrollbar-track"></div>
             <button class="btn-nav active" data-target="0">HOME</button>
             <button class="btn-nav" data-target="1">ÜBER MICH</button>
-            <button class="btn-nav" data-target="2">SERVICE</button>
+            <button class="btn-nav" data-target="2">MEIN SERVICE</button>
             <button class="btn-nav" data-target="3">PORTFOLIO</button>
             <button class="btn-nav" data-target="4">PRINCIPALS</button>
             <button class="btn-nav" data-target="5">CONTACT</button>
@@ -32,7 +32,7 @@
             <a href=""><h1 class="unten">MY WEBSITE</h1></a>
         </button>
     </header>
-    <main>
+    <main class="content">
          <div class="block home" data-index="0">
             <h1 class="title-red">Wellcome</h1>
             <h1 class="title">I am</h1>
@@ -44,8 +44,8 @@
             <div class="block aboutme" data-index="1">
             <div class="info">
                   <div class="fotos">
-                    <img src="../images/it (6).png" alt="" class="foto1">
-                    <img src="../images/3a.jpg" alt="" class="foto2">
+                    <img src="images/it (6).png" alt="" class="foto1">
+                    <img src="images/3a.jpg" alt="" class="foto2">
                 </div>
                 <div class="textcontainer">
                          <h1 class="title">About me</h1>
@@ -59,15 +59,15 @@
         <div class="skills-container">
                     <div class="skill">
                         <h1>HTML and CSS</h1>
-                        <img src="../images/html.svg" alt="">
+                        <img src="images/html.svg" alt="">
                     </div>
                      <div class="skill">
                         <h1>JavaScript</h1>
-                        <img src="../images/java.svg" alt="">
+                        <img src="images/java.svg" alt="">
                     </div>
                      <div class="skill">
                         <h1>Design</h1>
-                        <img src="../images/design.svg" alt="">
+                        <img src="images/design.svg" alt="">
                     </div>
                 </div>
                 
@@ -77,13 +77,13 @@
           
 
            <div class="block service" data-index="2">
-             <h1 class="title">Our Services</h1>
+             <h1 class="title">MEIN SERVICE</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
                 <div class="service-container">
             <div class="service-card">
-                <img src="../images/ser1.svg" alt="">
+                <img src="images/ser1.svg" alt="">
                 <div class="text-service">
                     <h1 class="title">Frontend</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -92,7 +92,7 @@
             </div>
 
                     <div class="service-card">
-                <img src="../images/ser2.svg" alt="">
+                <img src="images/ser2.svg" alt="">
                 <div class="text-service">
                     <h1 class="title">Web-Design</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -101,7 +101,7 @@
             </div>
 
                     <div class="service-card">
-                <img src="../images/ser3.svg" alt="">
+                <img src="images/ser3.svg" alt="">
                 <div class="text-service">
                     <h1 class="title">API Integration</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -110,7 +110,7 @@
             </div>
 
                     <div class="service-card">
-                <img src="../images/ser4.svg" alt="">
+                <img src="images/ser4.svg" alt="">
                 <div class="text-service">
                     <h1 class="title">Crossplatforming</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -120,7 +120,7 @@
                  
            </div>
 
-           <div class="availabel"><h1 class="title">I Am Availabel For Freelancer</h1> <button class="hireme">Hire me now</button></div>
+           <div  class="availabel"><h1 class="title">I Am Availabel For Freelancer</h1> <button class="hireme">Hire me now</button></div>
 
        <div class="reviews">
         <h1 class="title">Reviews</h1>
@@ -133,13 +133,13 @@
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p class="description nameR">Anastasia J, "InLingua" GMBH</p>
             </div>
-            <div class="slider-item" data-img-src="../images/jeff.jpg">
+            <div class="slider-item" data-img-src="images/jeff.jpg">
                 <p class="description">Viel Spassssssssssssssss 👀du darfst auch die Farben anderen wenn du die nicht magst.
 aber erstmal ohne Animation bitte </p>
                 <p class="description nameR">Author 2</p>
             </div>
-            <div class="slider-item" data-img-src="../images/irina.jpg">
-                <p class="description">Super, des werde ich erstmal gucken. Du kannst erstmal folgende Sachen recherchieren und sich damit nur kennen lernen. Rect, Nextjs, Typescript, npm und git</p>
+            <div class="slider-item" data-img-src="images/irina.jpg">
+                <p class="description">Super, des werde ich erstmal gucken. Du kannst  folgende Sachen recherchieren und sich damit nur kennen lernen. Rect, Nextjs, Typescript, npm und git</p>
                 <p class="description nameR">Author 3</p>
             </div>
         </div>
@@ -160,38 +160,41 @@ aber erstmal ohne Animation bitte </p>
     <h1 class="title">I love what I do</h1>
     <div class="portfolio-nav-container">
         <div class="portfolio-nav" id="project1">
+            <div class="border"></div> 
             <div class="background">
-                <img src="../images/api.png" alt="Фон 1">
+                <img src="images/api.png" alt="Фон 1">
             </div>
             <div class="onhover">
                 <h1 class="title">Rest API</h1>
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button>Offnen</button>
+                <button><h2>Offnen</h2></button>
             </div>
         </div>
 
         <div class="portfolio-nav" id="project2">
+            <div class="border"></div> 
             <div class="background">
-                <img src="../images/scroll.png" alt="Фон 2">
+                <img src="images/scroll.png" alt="Фон 2">
             </div>
             <div class="onhover">
                 <h1 class="title">Scroll Effect</h1>
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button>Offnen</button>
+                <button><h2>Offnen</h2></button>
             </div>
         </div>
 
         <div class="portfolio-nav" id="project3">
+            <div class="border"></div> 
             <div class="background">
-                <img src="../images/shop.png" alt="Фон 3">
+                <img src="images/shop.png" alt="Фон 3">
             </div>
             <div class="onhover">
                 <h1 class="title">E-Commerce</h1>
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button>Offnen</button>
+               <button><h2>Offnen</h2></button>
             </div>
         </div>
     </div>
@@ -203,7 +206,7 @@ aber erstmal ohne Animation bitte </p>
                 <h1 class="title">Principals</h1>
                    <div class="service-container">
             <div class="service-card">
-                <img src="../images/time.svg" alt="">
+                <img src="images/time.svg" alt="">
                 <div class="text-service">
                     <h1 class="title">Pünktlichkeit</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -212,7 +215,7 @@ aber erstmal ohne Animation bitte </p>
             </div>
 
                     <div class="service-card">
-                <img src="../images/page.svg" alt="">
+                <img src="images/page.svg" alt="">
                 <div class="text-service">
                     <h1 class="title">Qualität</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -221,7 +224,7 @@ aber erstmal ohne Animation bitte </p>
             </div>
 
                     <div class="service-card">
-                <img src="../images/sir.svg" alt="">
+                <img src="images/sir.svg" alt="">
                 <div class="text-service">
                     <h1 class="title">Höflichkeit</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -232,9 +235,9 @@ aber erstmal ohne Animation bitte </p>
              </div>
 
               <div class="block contactus" data-index="5">
-                <h1 class="title">Our Services</h1>
+                <h1 class="title">Contactieren</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                sed do eiusmod tempor incididunt ut labore.</p>
                 <form class="input-container">
                     <div class="small-container">
                         <input class="small" type="text" id="name" placeholder="NAME" required>
@@ -246,12 +249,12 @@ aber erstmal ohne Animation bitte </p>
                 <button class="send" id="sendButton">SEND</button>
                 <div class="contact-container">
                     <div class="contact bigcon">
-                        <img src="../images/phone.svg" alt="">
+                        <img src="images/phone.svg" alt="">
                         <h2>1232391293</h2>
                     </div>
                      <div class="contact">
                         
-                        <img src="../images/home.svg" alt="" class="home1">
+                        <img src="images/home.svg" alt="" class="home1">
                         <h2>Gütersloh</h2>
                     </div>
                     <div class="contact bigcon">

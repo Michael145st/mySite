@@ -245,6 +245,12 @@ window.addEventListener('scroll', updateUntenButton);
 // Устанавливаем начальное состояние кнопки "unten" при загрузке страницы
 updateUntenButton();
 
+// Добавляем слушатель события прокрутки страницы
+window.addEventListener('scroll', updateUntenButton)
+
+// Устанавливаем начальное состояние кнопки "unten" при загрузке страницы
+updateUntenButton()
+
 document.addEventListener('DOMContentLoaded', function () {
 	const scrollbarTrack = document.getElementById('scrollbar-track')
 
@@ -263,3 +269,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	updateScrollbarColor() // Обновляем цвет дорожки скроллбара при загрузке страницы
 })
 
+const portfolioItems = document.querySelectorAll('.portfolio-nav')
+
+// Добавляем обработчик события клика для каждой карточки
+portfolioItems.forEach(item => {
+	item.addEventListener('click', () => {
+		// Проверяем, есть ли класс "open" у текущей карточки
+		const isOpen = item.classList.contains('open')
+
+		// Удаляем класс "open" у всех карточек
+		portfolioItems.forEach(item => {
+			item.classList.remove('open')
+		})
+
+		// Если класс "open" не был у текущей карточки, добавляем его
+		if (!isOpen) {
+			item.classList.add('open')
+		}
+	})
+})
