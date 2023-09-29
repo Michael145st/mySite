@@ -1,0 +1,459 @@
+body::-webkit-scrollbar-thumb { transition: 0.5s; 
+  background-color: #bf152c; /* Изменен цвет при наведении */
+  width: 7vw; /* Увеличиваем ширину при наведении */
+  border: 0px solid #2c2c2c;
+}
+
+/* Анимация изменения цвета "плашки" скроллбара при наведении */
+
+body::-webkit-scrollbar-thumb:active { transition: 1s ease-in-out; 
+  background-color: #bf152c; /* Изменен цвет при наведении */
+  width: 7vw; /* Увеличиваем ширину при наведении */
+  border: 3.5px  solid #2c2c2c; border-radius: 1px;
+}
+
+.html {overflow-x: hidden; overflow-y: hidden; height: 100vh; scroll-behavior: smooth;}
+a {text-decoration: none;}
+button {cursor: pointer;}
+/* Стили для скроллбара */
+/* Общие стили для скроллбара */
+/* Общие стили для скроллбара */
+/* Стили для основного контейнера */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(48, 48, 48);
+  overflow-y: scroll; /* Включаем вертикальный скролл контейнера */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Стили для скроллбара */
+body::-webkit-scrollbar {
+  width: 20px; /* Ширина скроллбара */
+  background: transparent; /* Прозрачный фон скроллбара */
+}
+
+/* Стили для фона дорожки скроллбара */
+body::-webkit-scrollbar-track {
+  background: transparent; /* Прозрачный фон дорожки */
+}
+
+/* Стили для "плашки" скроллбара */
+body::-webkit-scrollbar-thumb {
+  background-color: #84212e; /* Цвет "плашки" */
+  border-radius: 2px; /* Закругления "плашки" */
+  border: 2px solid #04040493; /* Граница "плашки" */ width: 5vw;
+}
+
+/* Стили для собственного элемента дорожки скроллбара */
+body::-webkit-scrollbar-track {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px; /* Ширина дорожки скроллбара */
+  height: 100%; /* Высота дорожки скроллбара, равная высоте окна просмотра */
+  background: #84212e00; /* Начальный цвет дорожки */
+  z-index: 9999; /* Помещаем дорожку скроллбара выше контента */
+}
+
+
+
+#scrollbar-track {
+  position: fixed;
+  top: 0%;
+  left: 252px;
+  width: 2px; /* Ширина дорожки скроллбара */
+  height: 100%; /* Высота дорожки скроллбара, равная высоте окна просмотра */
+  background: #84212e00; /* Начальный цвет дорожки */
+  z-index: 9999; /* Помещаем дорожку скроллбара выше контента */
+}
+header {z-index: +100;
+    width: 8vw;
+    width: 252px;
+    position: fixed;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+   height: 100vh;
+    justify-items: center;
+    align-items: center;
+    
+    border: none; border-right: 0.vw solid rgb(48, 48, 48);
+    justify-content: space-between;
+overflow: hidden;
+   
+    
+    
+    
+}
+
+.portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 48%;
+    margin: 0; ;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-align: center;
+ 
+    margin-top: 10px;
+}
+.unten {font-size: 15px; color: rgb(57, 57, 57);  filter:grayscale(1.6)}
+
+.logo {
+   margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 35%;
+  font-weight: 900;
+      
+}
+
+.btn-nav {
+    background-color: rgba(138, 92, 92, 0);
+    border: none;
+    
+    padding-top: 13px;
+    padding-bottom: 13px;
+    
+   display: table-cell;
+    width: 220px;
+    color: rgb(255, 255, 255);
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    border-color: red; 
+    align-content: center; border-radius: 5px; vertical-align: middle; padding: auto;
+    
+}
+
+main {
+    margin-left: 255px; width: calc(100% - 255.5px); margin-right: 5%;
+   margin-top: 0;
+   margin-bottom: 0;
+    background-color: rgba(118, 118, 118, 0.504);
+   overflow-x: hidden;
+    scroll-snap-type: y proximity;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; height: min-content; justify-content: flex-start;
+      
+    
+}
+footer {display: flex;  width: 100%;  align-items: center;}
+
+.block {display: flex; flex-direction: row; background-color: #252525; height: 9vh; width: 100%; justify-content: center; color: white;border: none; padding-left: 0vw;}
+button {font-family: "Poppins"; font-size: 14px; border: none;}
+p { font-family: "Nunito", Helvetica, Arial, sans-serif;color: #ffffff; font-size: 15px; } 
+h1 {font-family: "Poppins"}
+.block {display: flex;margin-top: 0; vertical-align: middle; align-items: center;}
+.title { color: #ffffff; font-family: "Poppins"; font-size: 40px; margin-bottom: 0.5vw; font-weight:bold; letter-spacing: -1px; width: max-content;}
+.description { font-size: 16px; font-weight: 300; line-height: 1.7; margin:0}
+.unten.active {color: #bababa; transition: 0.5s ease; scale: 1.4; filter: brightness(1.1);}
+
+
+.home {min-height: 100vh; width: 100%; background-color: rgb(31, 31, 31); align-items: center; align-content: center; justify-content: center; display: flex; flex-direction: column; padding-left: 15%; padding-right: 15%; background-image: url(../images/трини.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position-y: center; background-position-x:center; background-size: cover; }
+.title-red {font-size: 35px; color: #84212e; font-family: 'Nunito', sans-serif; margin-bottom: -1.5vw; margin-top: -4vw; letter-spacing: 4px; font-weight: bolder; color: #b82136;}
+.home .title {font-size: 70px; color: white;  font-family: 'Poppins', sans-serif;}
+.home .description {font-size: 18px; color: white;  font-family: 'Poppins', sans-serif; width: 50%; line-height: 1.5; text-align: center; margin-top: 1vw;}
+.home .down {font-family: 'Nunito', sans-serif; font-size: 18px; padding: 15px 45px 15px 45px;  background-color: #84212e; color: white; border-radius: 5px; border: none; margin-top: 3vw; font-weight: bolder;} 
+.active {color: #84212e; scale: 1.1; filter: brightness(1.3);}
+
+
+.aboutme {flex-direction: column; height: min-content; width: 100%; background-color: rgb(32, 32, 32); align-items: center;  vertical-align: middle}
+.fotos {display: flex; flex-direction: column; margin-top: 3vw; margin-left: 3vw; margin-bottom: 3vw; }
+.foto1 {max-width: 38vw; border-radius: 10px;}
+.foto2 {width: 16.5vw; border-radius: 10px; margin-top: -7.4vw; margin-left: 25vw;}
+.aboutme .description { margin-right: 4.5vw;  margin-top: 1vw;}
+.aboutme .title {line-height: 0.8;}
+.info {flex-direction: row; display: flex; } 
+.textcontainer {display: flex; flex-direction: column;   justify-content: space-around; height: min-content; margin: auto; margin-left: 4.5vw; padding-bottom: 3vw; } 
+.skills:optional {width: min-content; white-space: nowrap; margin-top: 2vw; padding: 1.3vw 2vw 1.3vw 2vw;  background-color: rgba(0, 0, 0, 0); border: 4px solid  #84212e; color: white; border-radius: 7px;}
+.skills-container {display: none; justify-content: space-between;  margin: 0vw 5% 0vw 5%; width: 90%; margin-bottom: 4vw;}
+.skill {width: 20vw; justify-content: center; align-items: center; display: flex; flex-direction: column; color: white; font-size: 13px;}
+
+.service {flex-direction: column; height: min-content; width: 100%; background-color: rgb(28, 28, 28); align-items: center;  vertical-align: middle}
+.service .description {width: 60%; text-align: center; margin-top: 1vw; margin-bottom: 40px; }
+.service .title {margin-top: 4.5vw;}
+.text-service .title {margin-top: 2%; letter-spacing: 0.1px;}
+.service-container {display: flex; flex-direction: row; width: 100%; margin-right: 0; flex-wrap: wrap; justify-content: space-evenly; margin-top: 2vw; margin-bottom: 3vw;}
+.service-card {width: 25vw;  display: flex; flex-direction: row;  width: min-content; justify-content: space-evenly; width: 30vw; margin-right: 0vw; margin-bottom: 3vw;}
+.service-card img {width: 12vw;}
+.text-service {height: min-content; margin: auto; margin-left: 1vw; min-width: 20vw;}
+.text-service .description {width: 100%; text-align: left; margin-top: 0vw;}
+.text-service .title {font-size: 25px;}
+.service-card img {margin-right: 0.2vw; filter: brightness(1.05);}
+
+.availabel {height: 20vw; background-image: url(../images/rokk.jpg); width: 100%; background-size: cover; background-attachment: fixed; background-position: bottom; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(rgba(194, 15, 15, 0.5), rgba(195, 17, 17, 0.5)),}
+.availabel .title {margin-top: 0; filter: brightness(1.6) sepia(1.5); }
+.hireme {font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: bold; padding: 10px;  background-color: #84212e; color: white; border-radius: 5px; border: none;  width: 15vw; margin-top: 1vw;}
+
+.reviews {display: flex; flex-direction: column; align-items: center; justify-items: center; width: 100%; height: min-content;}
+.reviews .title {margin-top: 4vw;}
+.figure {color: #932635; font-size: 50px; line-height: 0.8; }
+.reviews .portrait {margin-bottom: 2vw;}
+.reviews .slider-nav-container {margin: 5vw; margin-top: 3vw; width: 5vw; display: flex; justify-content: space-between;}
+.description.nameR {font-size: 15px; margin-top: 2vw; color: #932635; font-weight: bold; }
+.slider-nav {background-color: #f3f3f3; padding: 0.3vw; border: 0px; border-radius: 0.2vw;}
+.slider-nav:hover {  border-radius: 0.2vw; scale: 1.3; filter: brightness(1.3); transition: 0.1s ease;}
+
+.selected {background-color: #84212e; scale: 1.3;}
+.portfolio {flex-direction: column; height: min-content; width: 100%;  background-color: rgb(23, 23, 23); align-items: center;  vertical-align: middle}
+.portfolio .title-red {margin-top: 4vw; margin-bottom: 0.1vw; }
+.portfolio-nav-container {width: 90%; flex-direction: row; display: flex; justify-content: space-around; margin-top: 6vh; margin-bottom: 8vw;} 
+.portfolio-nav {width: 18vw; background-color: #84212e; height: 18vw; background-image: url(images/трини.jpg); border-radius: 2vw; border-bottom:4vh ; display: flex; align-items: center; justify-content: space-around; position: absolute; }
+#project1 {background-image: url(images/api.png); background-size: cover; background-position: center;}
+#project2 {background-image: url(images/scroll.png); background-size: cover; background-position: center;}
+#project3 {background-image: url(images/shop.png); background-size: cover; background-position: center;}
+.onhover {flex-direction: column;}
+.onhover button {width: 100%; height: 20%; display: flex; justify-content: space-around; margin-top: 0%; background-color: #992c3a;border: #84212e solid 1px; margin: 0; margin-top: 3vw; font-family: 'Nunito', sans-serif; color: #fff; font-weight: bold;}
+.onhover .title {font-size: 25px; margin-bottom: 2vw; margin-top: 1.5vw;  color: #a40c20d1;;}
+
+
+.motto {flex-direction: column; height: min-content; width: 100%; background-color: rgb(16, 16, 16); align-items: center;  vertical-align: middle}
+.motto .service-container {flex-direction: row; margin-top: 1.5vw; margin-bottom: 6vw;}
+.motto .service-card {width: 26%; margin-bottom: 0; flex-direction: column; align-items: center;}
+.motto .service-card img {width: 10vw;}
+.motto .text-service {align-items: center;  text-align: center; display: flex; flex-direction: column; margin-left: 0;}
+.motto .description {text-align: center; width: 80%;}
+.motto .title {margin-top: 3vw; margin-bottom: 2vw;}
+.motto .service-card .title {margin-top: 1vw;}
+.motto .service-card img {margin-right: 0;  filter: brightness(1.1);}
+
+
+.contactus {flex-direction: column; height: min-content; width: 100%; background-color: rgb(30, 30, 30); align-items: center;  vertical-align: middle; }
+.contactus .title {margin-top: 5vw; margin-bottom: 2.5vw;}
+.contactus .description {max-width: 60%; text-align: center;} 
+.input-container { height: 10vw; display: flex; justify-content: center; width: 100%; padding-left: 12%; padding-right: 10%; margin-top: 3.5vw; }
+.small-container {display: flex; height: 10vw; flex-direction: column; justify-content: space-between; width: 30vw;}
+
+ .send { margin-top: 4vw; margin-bottom: 1vw; font-family: 'Nunito', sans-serif; font-size: 18px; padding: 10px;    background-color: #84212e; color: white; border-radius: 5px; border: none;  width: 10vw; font-weight: bold;}
+input:focus, input:focus-visible, input::selection, input::slotted {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1vw; border-bottom-width: 0.25vw; border-bottom-color: #84212e; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3vw; padding: 0.4vw; padding-left: 0.6vw; column-count:none}
+ input {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1vw; border-bottom-width: 0.25vw; border-bottom-color: #84212e; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3vw; padding: 0.4vw; padding-left: 0.6vw; column-count:none; font-family: 'Nunito', sans-serif; font-weight: bold; } 
+textarea {border-radius: 8px; border: solid; border-color: rgb(0, 0, 0);border-width: 0.1vw; border-bottom-width: 0.25vw; border-bottom-color: #84212e; background-color: rgba(0, 0, 0, 0.164); color: rgb(255, 255, 255); font-size: 1.3vw; padding: 0.4vw; width: 100%; font-family: 'Nunito', sans-serif; font-weight: bold; }
+input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
+.big {width: 41.5vw; height: auto; align-content: center ; display: flex; flex-wrap: wrap; margin-left: 2vw; margin-right: 1vw;}
+.contact-container {display: flex; width: 100%; justify-content: space-around; margin-bottom: 3.5%; margin-top: 3.5vw;}
+.contact img {width: 3vw; }
+.contact {width: 20vw; flex-direction: column; display: flex; align-items: center; color: white;  font-family: 'Nunito', sans-serif; font-size: 12px;}
+:optional {border-bottom-color: grey;}
+
+.slider-item {flex-direction: column; width: 80%; flex-wrap: wrap; align-items: center; display: none;}
+.slider-content {display: flex; text-align: center; justify-content: space-evenly; width: 100%; }
+.mana {border-bottom-color:rgb(2, 70, 2); scale: 1.02; transition: 2s ease}
+.send.mana { scale: 1.2; filter: brightness(1.2) ; transition: 0.8s ease; padding: 15px;}
+.arrow {background-color: #84212e;  position: absolute; right: 10vw; color: rgb(255, 255, 255); font-size: 15px; font-weight: 900; border: none; border-radius: 4px; justify-content: center; padding: 10px; padding-bottom: 5px; width: 2vw; height: min-content; border: 2px solid #04040493;}
+.b3 {font-size: 0.9vw;}
+.b3.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.3; filter: brightness(1.5);}
+.arrow.active {color: rgb(135, 135, 135);; transition: 0.5s ease; scale: 1.4; filter: brightness(1.4) contrast(1.1); border: 2px solid #04040493;}
+
+.portfolio-nav {
+            position: relative;
+            border: solid 0.5vw #84212e;
+            overflow: hidden;
+        }
+        .background img {width: 100%; border: 0;}
+
+         #project1 .background {background-image: url(images/api.png); background-repeat: no-repeat;  border: none; 
+            width: 100%;
+            height: 100%;
+           display: flex;
+            background-size: cover;
+            transition: filter 0.3s, transform 0.3s ease;
+        }
+
+        #project2 .background {background-image: url(images/scroll.png); border: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-size: cover; background-position: center; background-position-x: left;
+            transition: filter 0.3s, transform 0.3s ease; 
+        }
+
+        #project3 .background {background-image: url(images/shop.png); background-repeat: no-repeat; border: none;
+            width: 100%;
+            height: 100%;
+            display: flex; 
+            background-size: cover;
+            transition: filter 0.3s, transform 0.3s ease;
+        }
+
+        .portfolio-nav .onhover {
+            position: absolute; border: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.822); /* Затемнение */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            color: #fff; /* Цвет текста на затемненном фоне */
+            opacity: 0; /* Изначально невидим */
+            transition: opacity 0.1s ease;
+        }
+
+       .portfolio-nav {filter:  contrast(1.6) grayscale(1.3); 
+    /* Исходные стили */cursor: pointer;
+   
+    transition: 0.5s ease-out;
+    transform: scale(1) translateY(0);
+}
+
+.portfolio-nav .background {
+    /* Исходные стили */
+
+    filter: blur(0) brightness(1);
+    transform: scale(1);
+    transition: 3s ease;
+}
+
+.portfolio-nav:hover {filter:  contrast(1.3) grayscale(0); transition: 0.5s ease-out; scale: 1.05;   transform: translateY(0.7vh);  }
+.portfolio-nav.open:hover  {filter: none; scale: none; transform: none;}
+
+.portfolio-nav.open {cursor: auto; filter:  contrast(1) grayscale(0); 
+    /* Стили при ховере */
+    height: 34vw;
+    width: 27vw;
+    margin: 0 3vw; 
+    
+}
+
+
+.portfolio-nav.open .description {text-align: left; margin: 4%;}
+
+.portfolio-nav.open .background {
+    /* Стили при ховере */
+    filter: blur(9px) brightness(0.8);
+    transform: scale(1);
+}
+
+
+        .portfolio-nav.open .onhover {border: none;
+            opacity: 1; /* Плавное появление при наведении */
+        }
+
+        .portfolio-nav.open .onhover button {display: flex; align-items: center; align-content: center;}
+ .portfolio-nav.open .onhover button a {  text-align: center; width: 13%; display: flex; ; color: #84212e; font-size: 1vh;
+    padding: 25px 15px;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    /* Плавное появление при наведении */
+        }
+
+
+        @media screen and (max-width: 1200px) {
+            
+            button {white-space: nowrap; min-width: min-content;}
+            header {width: 150px; border-right: solid rgb(48, 48, 48) 2px;}
+            .portrait {width: 100px; height: 100px; margin-top: 1vw;}
+            main {margin-left: 140px; width: calc(100% - 143px); padding-left: -10%;}
+            
+#scrollbar-track {left: 150px; top: 0%; height: 100%;}
+
+            .home {background-position: right;}
+            
+            .info {flex-direction: column;}
+            .textcontainer .description  {margin-right: -10vw; width: 95%;}
+            .fotos {align-items: center; margin-bottom: -1vw; margin-top: 6vw;}
+            .foto1 {max-width: 60vw; margin-bottom: 3vw;}
+            .foto2 {margin-top: -11vw;margin-right: -15vw; width: 23vw; margin-bottom: -4vw;}
+            .skills-container {margin-top: -3vw; margin-bottom: 6vw; flex-direction: column; margin-left: 0; align-items: center; }
+            .textcontainer {max-width: 60vw; margin-top: 1vw; margin-bottom: 1.5vw; }
+            .skills:optional {margin-bottom: 5vw; margin-left: 60%; margin-top: 3vw; padding: 3vw;}
+            .skill {font-size: 10px; width: 80%; margin-top: 3vw; align-items: center; }
+            .skill img {width: 80%; margin-top: -2vw;}
+            
+            .service .description {width: 80%;}
+            .service-card .description {width: 100%;}
+            .service-card img {width: 20vw; margin-right: 2vw;}
+            .reviews .title {margin-top: 6vw;}
+
+            .reviews .slider-nav-container {width: min-content; margin-top: -1vw;}
+            .slider-nav {padding: 0.7vw; margin: 2vw;}
+            .slider-content .description {width: 100%;}
+
+            .availabel {height: min-content;}
+            .availabel .title {width: 70%; text-align: center; margin-top: 5vw;}
+            .hireme {margin-bottom: 5vh; margin-top: 3vw;}
+
+           .portfolio {height: min-content;}
+            .portfolio-nav-container {flex-direction: column; width: 100%; align-items: center;}
+            .portfolio-nav {height: 30vw; width: 50vw; margin-top: 5vw; background-color: #5b5b5b;  pointer-events: auto; background-repeat:no-repeat; background-size: cover;}
+            .portfolio-nav img {  }
+            #project1 img 
+            .background img {margin: auto;}
+            .service-card {min-width: 60vw;}
+            .portfolio-nav:hover {transition: 0.6s ease-in-out; height: min-content;  margin-bottom: 4vh;
+             /* Размытие при наведении */
+            transform: scale(1.1) translateY(2vh);}
+
+            .motto .service-card {margin-bottom: 5vw; margin-top: 1vw;}
+            .motto {padding-top: 2vw;}
+
+            .contactus {height: min-content;}
+            .small-container {height: 13vw; width: 65%;}
+            .small {font-size: 15px;}
+            .big {width: 100%; margin-left: 0; margin-top: 5vw; height: 23vw; font-size: 15px;}
+            .input-container {flex-direction: column; width: 80%; height: min-content; align-items: center;}
+            .contact {font-size: 10px; }
+            .contact img {width: 5vw;}
+            .b3 {font-size: 12px;}
+        }
+
+
+         @media screen and (max-width: 450px) {
+          header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
+        .home {background-position: -80vh bottom; background-position: normal;}
+        .home .description {width: 80%;}
+        .home .title {margin-top: 3vh;} 
+          .info {width: 100%;}
+        .foto1 {max-width: 90vw; width: 90vw; margin-left: -3vw;}
+        .foto2 {max-width: 500vw; width: 50vw; margin-bottom: -14vh; margin-top: -10vh;}
+        .textcontainer .title {margin-bottom: 4vh; font-size: 17vw;}
+        .aboutme .description {width: 150%; margin-left: 2vw;}
+        .skills:optional {width: 90%; margin-top: 5vh;}
+        .skills-container {margin-bottom: 8vh; margin-left: 2%;} .service .service-container {flex-direction: column;}
+        .service .title {font-size: 13vw; }
+        .service .service-card {flex-direction: row; margin-left: 20%; width: 85%;}
+        .service .service-card img {width: 15vw; position: absolute; left: 3.5%; padding-top: 4%;  } .service .service-card .text-service {width: 85%;}
+        .service .service-card .title {font-size: 7vw;}
+        .reviews .title {margin-top: 5vh;} .slider-nav {padding: 2vw; margin: 2vw;}
+        .portfolio {padding-top: 5vh;}  #project1 img {margin-left: 0%;}
+        .portfolio-nav {height: 20vh; width: 80wv; min-width: 80vw; } #project1 .background {height: 30vw; width: auto;} #project2 .background {height: 30vw; width: auto;} #project3 .background {height: 30vw; width: auto;}
+        .portfolio-nav.open {height: 65vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
+        .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 3; text-align: center; justify-content: space-around;}
+        .motto .service-card {flex-direction: column; margin: 5vh; width: 100%;} 
+        .motto .service-card img {position: static; width: 30vw;}
+        .availabel {height: 70vh;}
+        .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0;} 
+    .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
+     .contactus {padding-top: 5vh;}
+    .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh;} .contact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
+  }
+         
