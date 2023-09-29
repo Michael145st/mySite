@@ -438,7 +438,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .textcontainer .title {margin-bottom: 4vh; font-size: 17vw;}
         .aboutme .description {width: 150%; margin-left: 2vw;}
         .skills:optional {width: 90%; margin-top: 5vh;}
-        .skills-container {margin-bottom: 8vh;} .service .service-container {flex-direction: column;}
+        .skills-container {margin-bottom: 8vh; margin-left: 2%;} .service .service-container {flex-direction: column;}
         .service .title {font-size: 13vw; }
         .service .service-card {flex-direction: row; margin-left: 20%; width: 85%;}
         .service .service-card img {width: 15vw; position: absolute; left: 3.5%; padding-top: 4%;  }
