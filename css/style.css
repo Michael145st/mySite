@@ -383,7 +383,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             .fotos {align-items: center; margin-bottom: -1vw; margin-top: 6vw;}
             .foto1 {max-width: 60vw; margin-bottom: 3vw;}
             .foto2 {margin-top: -11vw;margin-right: -15vw; width: 23vw; margin-bottom: -4vw;}
-            .skills-container {margin-top: -3vw; margin-bottom: 6vw; flex-direction: column; margin-left: 0; align-items: center; }
+            .skills-container {margin-top: -3vw; margin-bottom: 6vw; flex-direction: column; margin-left: 6vw; align-items: center; }
             .textcontainer {max-width: 60vw; margin-top: 1vw; margin-bottom: 1.5vw; }
             .skills:optional {margin-bottom: 5vw; margin-left: 60%; margin-top: 3vw; padding: 3vw;}
             .skill {font-size: 10px; width: 80%; margin-top: 3vw; align-items: center; }
@@ -405,7 +405,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
            .portfolio {height: min-content;}
             .portfolio-nav-container {flex-direction: column; width: 100%; align-items: center;}
             .portfolio-nav {height: 30vw; width: 50vw; margin-top: 5vw; background-color: #5b5b5b;  pointer-events: auto; background-repeat:no-repeat; background-size: cover;}
-            .portfolio-nav img {  padding-right: 60vw; }
+           
             #project1 img 
             .background img {margin: auto;}
             .service-card {min-width: 60vw;}
@@ -427,7 +427,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         }
 
 
-         @media screen and (max-width: 450px) { .portfolio-nav img {  padding-right: 60vw; }
+         @media screen and (max-width: 650px) { .portfolio-nav img {  padding-right: 60vw; }
           header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
         .home {background-position: -60vh bottom; background-attachment: scroll;}
         .home .description {width: 80%;}
@@ -443,17 +443,17 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .service .service-card {flex-direction: row; margin-left: 25%; width: 80%;}
         .service .service-card img {width: 20vw; position: absolute; left: 3.5%; padding-top: 4%;  } .service .service-card .text-service {width: 85%;}
         .service .service-card .title {font-size: 7vw;}
-        .reviews .title {margin-top: 5vh;} .slider-nav {padding: 2vw; margin: 2vw;}
+        .reviews .title {margin-top: 5vh; font-size: 15vw;} .slider-nav {padding: 2vw; margin: 2vw;}
         .portfolio {padding-top: 5vh;}  #project1 img {margin-left: 0%;}
         .portfolio-nav {height: 20vh; width: 80wv; min-width: 80vw; } #project1 .background {height: 30vw; width: 30vw;} #project2 .background {height: 30vw; width: 30vw;} #project3 .background {height: 30vw; width: 30vw;}
         .portfolio-nav.open {height: 65vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
-        .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 3; text-align: center; justify-content: space-around;}
-        .motto .service-card {flex-direction: column; margin: 4vh; width: 100%;} 
-        .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;}
-        .availabel {height: 70vh;}
-        .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0;} 
+        .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
+        .motto .service-card {flex-direction: column; margin: 4vh; width: 100%;}  .motto .title {font-size: 15dvw;}
+        .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;} .motto .text-service .title {font-size: 7vw;}
+        .availabel {height: 70vh;} .reviews .title {font-size: 18vw;}
+        .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
-     .contactus {padding-top: 5vh;}
+     .contactus {padding-top: 3vh;} .contactus .title {font-size: 13dvw; padding-bottom: 2vh;}
     .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh;} .contact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
   }
          
