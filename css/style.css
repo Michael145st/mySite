@@ -429,7 +429,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
          @media screen and (max-width: 450px) { .portfolio-nav img {  padding-right: 60vw; }
           header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
-        .home {background-position: -80vh bottom; background-attachment: scroll;}
+        .home {background-position: -60vh bottom; background-attachment: scroll;}
         .home .description {width: 80%;}
         .home .title {margin-top: 3vh;} 
           .info {width: 100%;}
