@@ -440,16 +440,16 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .skills:optional {width: 90%; margin-top: 5vh;}
         .skills-container {margin-bottom: 8vh; margin-left: 2%;} .service .service-container {flex-direction: column;}
         .service .title {font-size: 13vw; }
-        .service .service-card {flex-direction: row; margin-left: 20%; width: 85%;}
-        .service .service-card img {width: 15vw; position: absolute; left: 3.5%; padding-top: 4%;  } .service .service-card .text-service {width: 85%;}
+        .service .service-card {flex-direction: row; margin-left: 25%; width: 80%;}
+        .service .service-card img {width: 20vw; position: absolute; left: 3.5%; padding-top: 4%;  } .service .service-card .text-service {width: 85%;}
         .service .service-card .title {font-size: 7vw;}
         .reviews .title {margin-top: 5vh;} .slider-nav {padding: 2vw; margin: 2vw;}
         .portfolio {padding-top: 5vh;}  #project1 img {margin-left: 0%;}
         .portfolio-nav {height: 20vh; width: 80wv; min-width: 80vw; } #project1 .background {height: 30vw; width: 30vw;} #project2 .background {height: 30vw; width: 30vw;} #project3 .background {height: 30vw; width: 30vw;}
         .portfolio-nav.open {height: 65vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
         .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 3; text-align: center; justify-content: space-around;}
-        .motto .service-card {flex-direction: column; margin: 5vh; width: 100%;} 
-        .motto .service-card img {position: static; width: 30vw;}
+        .motto .service-card {flex-direction: column; margin: 4vh; width: 100%;} 
+        .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;}
         .availabel {height: 70vh;}
         .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
