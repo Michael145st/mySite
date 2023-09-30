@@ -430,8 +430,8 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
          @media screen and (max-width: 650px) { .portfolio-nav img {  padding-right: 60vw; }
           header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
         .home {background-position: -60vh bottom; background-attachment: scroll;}
-        .home .description {width: 80%;} .down {margin-top: 4vh};
-        .home .title {margin-top: 3vh;} 
+        .home .description {width: 80%;} .home .down {margin-top: 6vh};
+        .home .title {margin-top: 1vh;} .home .title-red {margin-top: -2vw; margin-bottom: -5.5vw;}
           .info {width: 100%;}
         .foto1 {max-width: 90vw; width: 90vw; margin-left: -3vw;}
         .foto2 {max-width: 500vw; width: 50vw; margin-bottom: -14vh; margin-top: -10vh;}
@@ -450,7 +450,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
         .motto .service-card {flex-direction: column; margin: 4vh; width: 100%;}  .motto .title {font-size: 15vw;}
         .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;} .motto .text-service .title {font-size: 7vw;}
-        .availabel {height: 70vh;} .reviews .title {font-size: 15vw;}
+        .availabel {height: 70vh; align-items: center; justify-content: center;} .availabel .title {width: 95%; margin-bottom: 2vh;} .reviews .title {font-size: 15vw;}
         .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
      .contactus {padding-top: 3vh;} .contactus .title {font-size: 13dvw; padding-bottom: 2vh;}
