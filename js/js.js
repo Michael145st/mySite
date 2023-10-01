@@ -362,6 +362,43 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+    document.getElementById('sendButton').addEventListener('click', function () {
+        const name = document.getElementById('name').value;
+        const company = document.getElementById('company').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Замените 'YOUR_BOT_TOKEN' на токен вашего бота Telegram
+        const botToken = '6495569227:AAFWgyr05DE59rVVz9WtbG1hW2P7LK6gsm8'
+        // Замените 'CHAT_ID' на ID чата, в который вы хотите отправить сообщение
+        const chatId = '-1001901970344'
+
+        const text = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nMessage: ${message}`;
+
+        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: text,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Сообщение успешно отправлено в Telegram!');
+            } else {
+                alert('Произошла ошибка при отправке сообщения в Telegram.');
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка при отправке сообщения в Telegram:', error);
+        });
+    });
+
+
 
 
 
