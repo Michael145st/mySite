@@ -205,7 +205,7 @@ aber erstmal ohne Animation bitte </p>
                 <h1 class="title">Contactieren</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore.</p>
-                <form class="input-container" id="myForm">
+ <form class="input-container" id="myForm">
         <div class="small-container">
             <input class="small" type="text" id="name" placeholder="NAME" required>
             <input class="small" type="text" id="company" placeholder="FIRMA">
@@ -229,10 +229,10 @@ aber erstmal ohne Animation bitte </p>
             var data = {
                 personalizations: [
                     {
-                        to: [{ email: "strelcov0921@gmail.com" }] // Замените на вашу электронную почту
+                        to: [{ email: "strelcov0921@gmail.com" }]
                     }
                 ],
-                from: { email: "from@example.com" }, // Замените на вашу электронную почту
+                from: { email: "strelcov0921@gmail.com" }, // Замените на вашу электронную почту
                 subject: "Новое сообщение с сайта",
                 content: [
                     {
@@ -245,7 +245,7 @@ aber erstmal ohne Animation bitte </p>
             fetch("https://api.sendgrid.com/v3/mail/send", {
                 method: "POST",
                 headers: {
-                    Authorization: "SG.FdfF3lBVQrSO6D8FyfLo0g.RGqeFptmYSt36osm5rdsZwJP8FaNrdG9b6-hTLk_bcPYdMc", // Замените на ваш API-ключ SendGrid
+                    Authorization: "Bearer SG.FdfF3lBVQrSO6D8FyfLo0g.RGqeFptmYSt36osm5rdsZwJP8FaNrdG9b6-hTLk_bcPYdMc", // Замените на ваш API-ключ SendGrid
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(data)
