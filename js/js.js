@@ -276,19 +276,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 console.log('Script is running')
 
-
 // Идентификаторы вашего Contentful пространства и токен доступа
 const spaceId = 'fana5mnl0cnv'
 const accessToken = 'TWhWFg5LrI4Bt_hL0hN6FWUrXwuo5QRSMFXw2tzikuI'
 
 // Создаем клиент Contentful
-
 const client = contentful.createClient({
 	space: spaceId,
 	accessToken: accessToken,
 })
-
-// ...
 
 // Функция для загрузки и отображения контента
 function loadContent() {
@@ -338,21 +334,19 @@ function loadContent() {
 					container.appendChild(projectDiv)
 
 					// Добавляем обработчик события клика для каждой карточки
-					projects.forEach(project => {
-						item.addEventListener('click', () => {
-							// Проверяем, есть ли класс "open" у текущей карточки
-							const isOpen = item.classList.contains('open')
+					projectDiv.addEventListener('click', () => {
+						// Проверяем, есть ли класс "open" у текущей карточки
+						const isOpen = projectDiv.classList.contains('open')
 
-							// Удаляем класс "open" у всех карточек
-							projectDivs.forEach(item => {
-								item.classList.remove('open')
-							})
-
-							// Если класс "open" не был у текущей карточки, добавляем его
-							if (!isOpen) {
-								item.classList.add('open')
-							}
+						// Удаляем класс "open" у всех карточек
+						projects.forEach(item => {
+							item.classList.remove('open')
 						})
+
+						// Если класс "open" не был у текущей карточки, добавляем его
+						if (!isOpen) {
+							projectDiv.classList.add('open')
+						}
 					})
 				}
 			})
@@ -360,11 +354,11 @@ function loadContent() {
 		.catch(console.error)
 }
 
-// ...
+// Загружаем контент после полной загрузки DOM-дерева
+document.addEventListener('DOMContentLoaded', () => {
+	loadContent()
+})
 
-// Загружаем контент при загрузке страницы
-loadContent()
-// ...
 
 
 
