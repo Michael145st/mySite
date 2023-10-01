@@ -194,17 +194,17 @@ aber erstmal ohne Animation bitte </p>
                     projectDiv.classList.add('portfolio-nav');
 
                     // Используем "CTA component" для доступа к свойствам
-                    const ctaComponent = project.fields.CTAComponent;
+                    const componentCta = project.fields.componentCta; 
 
                     // Создаем HTML для проекта (подставьте свои поля из "CTA component")
                     projectDiv.innerHTML = `
                         <div class="background">
-                            <img src="${ctaComponent.img}" alt="">
+                            <img src="${componentCta.img}" alt="">
                         </div>
                         <div class="onhover">
-                            <h1 class="title">${ctaComponent.headline}</h1>
-                            <p class="description">${ctaComponent.subline}</p>
-                            <button><a href="${ctaComponent.link}" target="_blank">Открыть</a></button>
+                            <h1 class="title">${componentCta.headline}</h1>
+                            <p class="description">${componentCta.subline}</p>
+                            <button><a href="${componentCta.link}" target="_blank">Открыть</a></button>
                         </div>
                     `;
 
