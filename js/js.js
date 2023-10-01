@@ -323,13 +323,19 @@ function loadContent() {
 
 					// Создаем HTML для проекта (подставьте свои поля из Contentful)
 					// Создаем HTML для проекта (подставьте свои поля из Contentful)
+					// Извлекаем текст описания из объекта "description"
+					const descriptionText = project.fields.description
+
+					// ...
+
+					// Создаем HTML для проекта (подставьте свои поля из Contentful)
 					projectDiv.innerHTML = `
     <div class="background">
         <img src="${imageUrl}" alt="${project.fields.title}">
     </div>
     <div class="onhover">
         <h1 class="title">${project.fields.title}</h1>
-        <p class="description">${project.fields.description}</p>
+        <p class="description">${descriptionText}</p>
         <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
     </div>
 `
