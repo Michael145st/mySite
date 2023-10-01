@@ -162,62 +162,63 @@ aber erstmal ohne Animation bitte </p>
         <!-- Контейнер для проектов -->
     </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.min.js"></script>
 
-    <script>
-        // Идентификаторы вашего Contentful пространства и токен доступа
-        const spaceId = 'fana5mnl0cnv';
-        const accessToken = 'zs71gScvfL1t6T9EWSaK8UrdPLqDhohsASJWnJbCWTs';
+<script>
+    // Идентификаторы вашего Contentful пространства и токен доступа
+    const spaceId = 'fana5mnl0cnv';
+    const accessToken = 'zs71gScvfL1t6T9EWSaK8UrdPLqDhohsASJWnJbCWTs';
 
-        // Создаем клиент Contentful
-        const client = contentful.createClient({
-            space: spaceId,
-            accessToken: accessToken
-        });
+    // Создаем клиент Contentful
+    const client = contentful.createClient({
+        space: spaceId,
+        accessToken: accessToken
+    });
 
-        // Функция для загрузки и отображения контента
-function loadContent() {
-    client.getEntries()
-        .then((response) => {
-            // Получаем записи (контент) из Contentful
-            const projects = response.items;
+    // Функция для загрузки и отображения контента
+    function loadContent() {
+        client.getEntries()
+            .then((response) => {
+                // Получаем записи (контент) из Contentful
+                const projects = response.items;
 
-            // Получаем контейнер для проектов
-            const container = document.querySelector('.portfolio-nav-container');
+                // Получаем контейнер для проектов
+                const container = document.querySelector('.portfolio-nav-container');
 
-            // Очищаем контейнер
-            container.innerHTML = '';
+                // Очищаем контейнер
+                container.innerHTML = '';
 
-            // Отображаем каждый проект
-            projects.forEach((project) => {
-                const projectDiv = document.createElement('div');
-                projectDiv.classList.add('portfolio-nav');
+                // Отображаем каждый проект
+                projects.forEach((project) => {
+                    const projectDiv = document.createElement('div');
+                    projectDiv.classList.add('portfolio-nav');
 
-                // Используем "CTA component" для доступа к свойствам
-                const ctaComponent = project.fields.ctaComponent;
+                    // Используем "CTA component" для доступа к свойствам
+                    const ctaComponent = project.fields.CTAComponent;
 
-                // Создаем HTML для проекта (подставьте свои поля из "CTA component")
-                projectDiv.innerHTML = `
-                    <div class="background">
-                        <img src="${ctaComponent.img.url}" alt="${ctaComponent.title}">
-                    </div>
-                    <div class="onhover">
-                        <h1 class="title">${ctaComponent.headline}</h1>
-                        <p class="description">${ctaComponent.subline}</p>
-                        <button><a href="${ctaComponent.link}" target="_blank">Открыть</a></button>
-                    </div>
-                `;
+                    // Создаем HTML для проекта (подставьте свои поля из "CTA component")
+                    projectDiv.innerHTML = `
+                        <div class="background">
+                            <img src="${ctaComponent.img}" alt="">
+                        </div>
+                        <div class="onhover">
+                            <h1 class="title">${ctaComponent.headline}</h1>
+                            <p class="description">${ctaComponent.subline}</p>
+                            <button><a href="${ctaComponent.link}" target="_blank">Открыть</a></button>
+                        </div>
+                    `;
 
-                // Добавляем проект в контейнер
-                container.appendChild(projectDiv);
-            });
-        })
-        .catch(console.error);
-}
+                    // Добавляем проект в контейнер
+                    container.appendChild(projectDiv);
+                });
+            })
+            .catch(console.error);
+    }
 
-        // Загружаем контент при загрузке страницы
-        loadContent();
-    </script>
+    // Загружаем контент при загрузке страницы
+    loadContent();
+</script>
+
 </div>
 
                 
