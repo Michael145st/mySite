@@ -280,47 +280,47 @@ const accessToken = 'TWhWFg5LrI4Bt_hL0hN6FWUrXwuo5QRSMFXw2tzikuI';
 
 // Создаем клиент Contentful
 const client = contentful.createClient({
-	space: spaceId,
-	accessToken: accessToken,
+  space: spaceId,
+  accessToken: accessToken,
 });
 
 // Функция для загрузки и отображения контента
 function loadContent() {
-	client
-		.getEntries()
-		.then(response => {
-			console.log(response);
-			// Получаем записи (контент) из Contentful
-			const projects = response.items;
+  client
+    .getEntries()
+    .then(response => {
+      console.log(response);
+      // Получаем записи (контент) из Contentful
+      const projects = response.items;
 
-			// Получаем контейнер для проектов
-			const container = document.querySelector('.portfolio-nav-container');
+      // Получаем контейнер для проектов
+      const container = document.querySelector('.portfolio-nav-container');
 
-			// Очищаем контейнер
-			container.innerHTML = '';
+      // Очищаем контейнер
+      container.innerHTML = '';
 
-			// Отображаем каждый проект
-			projects.forEach(project => {
-				const projectDiv = document.createElement('div');
-				projectDiv.classList.add('portfolio-nav');
+      // Отображаем каждый проект
+      projects.forEach(project => {
+        const projectDiv = document.createElement('div');
+        projectDiv.classList.add('portfolio-nav');
 
-				// Используйте правильное имя поля (например, "image") в соответствии с вашей моделью данных Contentful
-				const image = project.fields.image;
+        // Используйте правильное имя поля (например, "image") в соответствии с вашей моделью данных Contentful
+        const image = project.fields.image;
 
-				// Проверка на наличие изображения перед его использованием
-				if (
-					image &&
-					image.fields &&
-					image.fields.file &&
-					image.fields.file.url
-				) {
-					const imageUrl = image.fields.file.url;
+        // Проверка на наличие изображения перед его использованием
+        if (
+          image &&
+          image.fields &&
+          image.fields.file &&
+          image.fields.file.url
+        ) {
+          const imageUrl = image.fields.file.url;
 
-					// Извлекаем текст описания из объекта "description"
-					const descriptionText = project.fields.description;
+          // Извлекаем текст описания из объекта "description"
+          const descriptionText = project.fields.description;
 
-					// Создаем HTML для проекта (подставьте свои поля из Contentful)
-					projectDiv.innerHTML = `
+          // Создаем HTML для проекта (подставьте свои поля из Contentful)
+          projectDiv.innerHTML = `
     <div class="background">
         <img src="${imageUrl}" alt="${project.fields.title}">
     </div>
@@ -329,36 +329,36 @@ function loadContent() {
         <p class="description">${descriptionText}</p>
         <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
     </div>
-`;
+  `;
 
-					// Добавляем проект в контейнер
-					container.appendChild(projectDiv);
+          // Добавляем проект в контейнер
+          container.appendChild(projectDiv);
 
-					// Добавляем обработчик события клика для текущей карточки
-					projectDiv.addEventListener('click', () => {
-						// Проверяем, есть ли класс "open" у текущей карточки
-						const isOpen = projectDiv.classList.contains('open');
+          // Добавляем обработчик события клика для текущей карточки
+          projectDiv.addEventListener('click', () => {
+            // Проверяем, есть ли класс "open" у текущей карточки
+            const isOpen = projectDiv.classList.contains('open');
 
-						// Удаляем класс "open" у всех карточек
-						const allProjects = document.querySelectorAll('.portfolio-nav');
-						allProjects.forEach(item => {
-							item.classList.remove('open');
-						});
+            // Удаляем класс "open" у всех карточек
+            const allProjects = document.querySelectorAll('.portfolio-nav');
+            allProjects.forEach(item => {
+              item.classList.remove('open');
+            });
 
-						// Если класс "open" не был у текущей карточки, добавляем его
-						if (!isOpen) {
-							projectDiv.classList.add('open');
-						}
-					});
-				}
-			});
-		})
-		.catch(console.error);
+            // Если класс "open" не был у текущей карточки, добавляем его
+            if (!isOpen) {
+              projectDiv.classList.add('open');
+            }
+          });
+        }
+      });
+    })
+    .catch(console.error);
 }
 
 // Загружаем контент после полной загрузки DOM-дерева
 document.addEventListener('DOMContentLoaded', () => {
-	loadContent();
+  loadContent();
 });
 
 
