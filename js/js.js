@@ -327,7 +327,7 @@ function loadContent() {
     <div class="onhover">
         <h1 class="title">${project.fields.title}</h1>
         <p class="description">${descriptionText}</p>
-        <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
+        <button><a href="${project.fields.link}" target="_blank">Öffnen</a></button>
     </div>
   `;
 
