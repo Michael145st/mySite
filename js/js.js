@@ -282,7 +282,7 @@ const spaceId = 'fana5mnl0cnv'
 const accessToken = 'TWhWFg5LrI4Bt_hL0hN6FWUrXwuo5QRSMFXw2tzikuI'
 
 // Создаем клиент Contentful
-const contentful = require('contentful')
+
 const client = contentful.createClient({
 	space: spaceId,
 	accessToken: accessToken,
