@@ -333,13 +333,14 @@ function loadContent() {
 					// Добавляем проект в контейнер
 					container.appendChild(projectDiv)
 
-					// Добавляем обработчик события клика для каждой карточки
+					// Добавляем обработчик события клика для текущей карточки
 					projectDiv.addEventListener('click', () => {
 						// Проверяем, есть ли класс "open" у текущей карточки
 						const isOpen = projectDiv.classList.contains('open')
 
 						// Удаляем класс "open" у всех карточек
-						projects.forEach(item => {
+						const allProjects = document.querySelectorAll('.portfolio-nav')
+						allProjects.forEach(item => {
 							item.classList.remove('open')
 						})
 
