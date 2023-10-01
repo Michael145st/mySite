@@ -339,6 +339,7 @@ function loadContent() {
 
 					// Добавляем обработчик события клика для каждой карточки
 					projectDiv.addEventListener('click', () => {
+						console.log('Клик по проекту')
 						// Проверяем, есть ли класс "open" у текущей карточки
 						const isOpen = projectDiv.classList.contains('open');
 
