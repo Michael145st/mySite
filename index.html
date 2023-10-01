@@ -205,15 +205,62 @@ aber erstmal ohne Animation bitte </p>
                 <h1 class="title">Contactieren</h1>
              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore.</p>
-                <form class="input-container">
-                    <div class="small-container">
-                        <input class="small" type="text" id="name" placeholder="NAME" required>
-                        <input class="small" type="text" id="company" placeholder="FIRMA">
-                        <input class="small" type="email" id="email" placeholder="EMAIL" required>
-                    </div>
-                     <textarea class="big" type="text" id="message" placeholder="IHRE NACHRICHT"  rows="5" required></textarea>
-                </form>
-                <button class="send" id="sendButton">SEND</button>
+                <form class="input-container" id="myForm">
+        <div class="small-container">
+            <input class="small" type="text" id="name" placeholder="NAME" required>
+            <input class="small" type="text" id="company" placeholder="FIRMA">
+            <input class="small" type="email" id="email" placeholder="EMAIL" required>
+        </div>
+        <textarea class="big" id="message" placeholder="IHRE NACHRICHT" rows="5" required></textarea>
+    </form>
+    <button class="send" id="sendButton">SEND</button>
+
+    <script>
+        document.getElementById("sendButton").addEventListener("click", function (e) {
+            e.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+            // Получаем данные из формы
+            var name = document.getElementById("name").value;
+            var company = document.getElementById("company").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Создаем объект для отправки данных на сервер SendGrid
+            var data = {
+                personalizations: [
+                    {
+                        to: [{ email: "strelcov0921@gmail.com" }] // Замените на вашу электронную почту
+                    }
+                ],
+                from: { email: "from@example.com" }, // Замените на вашу электронную почту
+                subject: "Новое сообщение с сайта",
+                content: [
+                    {
+                        type: "text/plain",
+                        value: `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nMessage: ${message}`
+                    }
+                ]
+            };
+
+            fetch("https://api.sendgrid.com/v3/mail/send", {
+                method: "POST",
+                headers: {
+                    Authorization: "SG.FdfF3lBVQrSO6D8FyfLo0g.RGqeFptmYSt36osm5rdsZwJP8FaNrdG9b6-hTLk_bcPYdMc", // Замените на ваш API-ключ SendGrid
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Ваш код обработки успешного ответа
+                alert("Данные успешно отправлены на вашу электронную почту");
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Произошла ошибка при отправке данных");
+            });
+        });
+    </script>
                 <div class="contact-container">
                     <div class="contact bigcon">
                         <img src="images/phone.svg" alt="">
