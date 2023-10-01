@@ -176,41 +176,44 @@ aber erstmal ohne Animation bitte </p>
         });
 
         // Функция для загрузки и отображения контента
-        function loadContent() {
-            client.getEntries()
-                .then((response) => {
-                    // Получаем записи (контент) из Contentful
-                    const projects = response.items;
+function loadContent() {
+    client.getEntries()
+        .then((response) => {
+            // Получаем записи (контент) из Contentful
+            const projects = response.items;
 
-                    // Получаем контейнер для проектов
-                    const container = document.querySelector('.portfolio-nav-container');
+            // Получаем контейнер для проектов
+            const container = document.querySelector('.portfolio-nav-container');
 
-                    // Очищаем контейнер
-                    container.innerHTML = '';
+            // Очищаем контейнер
+            container.innerHTML = '';
 
-                    // Отображаем каждый проект
-                    projects.forEach((project) => {
-                        const projectDiv = document.createElement('div');
-                        projectDiv.classList.add('portfolio-nav');
+            // Отображаем каждый проект
+            projects.forEach((project) => {
+                const projectDiv = document.createElement('div');
+                projectDiv.classList.add('portfolio-nav');
 
-                        // Создаем HTML для проекта (подставьте свои поля из Contentful)
-                        projectDiv.innerHTML = `
-                            <div class="background">
-                                <img src="${project.fields.image.fields.file.url}" alt="${project.fields.title}">
-                            </div>
-                            <div class="onhover">
-                                <h1 class="title">${project.fields.title}</h1>
-                                <p class="description">${project.fields.description}</p>
-                                <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
-                            </div>
-                        `;
+                // Используем "CTA component" для доступа к свойствам
+                const ctaComponent = project.fields.ctaComponent;
 
-                        // Добавляем проект в контейнер
-                        container.appendChild(projectDiv);
-                    });
-                })
-                .catch(console.error);
-        }
+                // Создаем HTML для проекта (подставьте свои поля из "CTA component")
+                projectDiv.innerHTML = `
+                    <div class="background">
+                        <img src="${ctaComponent.image.fields.file.url}" alt="${ctaComponent.title}">
+                    </div>
+                    <div class="onhover">
+                        <h1 class="title">${ctaComponent.title}</h1>
+                        <p class="description">${ctaComponent.description}</p>
+                        <button><a href="${ctaComponent.link}" target="_blank">Открыть</a></button>
+                    </div>
+                `;
+
+                // Добавляем проект в контейнер
+                container.appendChild(projectDiv);
+            });
+        })
+        .catch(console.error);
+}
 
         // Загружаем контент при загрузке страницы
         loadContent();
