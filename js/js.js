@@ -44,6 +44,10 @@ navButtons.forEach((button, index) => {
 	})
 })
 
+
+
+
+
 // Получаем кнопку "Show my skills" и элемент секции skill-container
 const showSkillsButton = document.querySelector('.skills')
 const skillContainer = document.querySelector('.skills-container')
@@ -269,22 +273,98 @@ document.addEventListener('DOMContentLoaded', function () {
 	updateScrollbarColor() // Обновляем цвет дорожки скроллбара при загрузке страницы
 })
 
-const portfolioItems = document.querySelectorAll('.portfolio-nav')
 
-// Добавляем обработчик события клика для каждой карточки
-portfolioItems.forEach(item => {
-	item.addEventListener('click', () => {
-		// Проверяем, есть ли класс "open" у текущей карточки
-		const isOpen = item.classList.contains('open')
+console.log('Script is running')
 
-		// Удаляем класс "open" у всех карточек
-		portfolioItems.forEach(item => {
-			item.classList.remove('open')
-		})
 
-		// Если класс "open" не был у текущей карточки, добавляем его
-		if (!isOpen) {
-			item.classList.add('open')
-		}
-	})
+// Идентификаторы вашего Contentful пространства и токен доступа
+const spaceId = 'fana5mnl0cnv'
+const accessToken = 'TWhWFg5LrI4Bt_hL0hN6FWUrXwuo5QRSMFXw2tzikuI'
+
+// Создаем клиент Contentful
+const contentful = require('contentful')
+const client = contentful.createClient({
+	space: spaceId,
+	accessToken: accessToken,
 })
+
+// ...
+
+// Функция для загрузки и отображения контента
+function loadContent() {
+	client
+		.getEntries()
+		.then(response => {
+			console.log(response);
+			// Получаем записи (контент) из Contentful
+			const projects = response.items;
+
+			// Получаем контейнер для проектов
+			const container = document.querySelector('.portfolio-nav-container');
+
+			// Очищаем контейнер
+			container.innerHTML = '';
+
+			// Отображаем каждый проект
+			projects.forEach(project => {
+				const projectDiv = document.createElement('div');
+				projectDiv.classList.add('portfolio-nav');
+
+				// Используйте правильное имя поля (например, "image") в соответствии с вашей моделью данных Contentful
+				const image = project.fields.image;
+
+				// Проверка на наличие изображения перед его использованием
+				if (
+					image &&
+					image.fields &&
+					image.fields.file &&
+					image.fields.file.url
+				) {
+					const imageUrl = image.fields.file.url;
+
+					// Создаем HTML для проекта (подставьте свои поля из Contentful)
+					projectDiv.innerHTML = `
+                        <div class="background">
+                            <img src="${imageUrl}" alt="${project.fields.title}">
+                        </div>
+                        <div class="onhover">
+                            <h1 class="title">${project.fields.title}</h1>
+                            <p class="description">${project.fields.description}</p>
+                            <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
+                        </div>
+                    `;
+
+					// Добавляем проект в контейнер
+					container.appendChild(projectDiv);
+
+					// Добавляем обработчик события клика для каждой карточки
+					projectDiv.addEventListener('click', () => {
+						// Проверяем, есть ли класс "open" у текущей карточки
+						const isOpen = projectDiv.classList.contains('open');
+
+						// Удаляем класс "open" у всех карточек
+						projects.forEach(item => {
+							item.classList.remove('open');
+						});
+
+						// Если класс "open" не был у текущей карточки, добавляем его
+						if (!isOpen) {
+							projectDiv.classList.add('open');
+						}
+					});
+				}
+			});
+		})
+		.catch(console.error);
+}
+
+// Загружаем контент при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+  loadContent();
+});
+
+
+
+
+
+
