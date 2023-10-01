@@ -158,46 +158,62 @@ aber erstmal ohne Animation bitte </p>
             <div class="block portfolio" data-index="3">
     <h1 class="title-red">Portfolio</h1>
     <h1 class="title">I love what I do</h1>
-    <div class="portfolio-nav-container">
-        <div class="portfolio-nav" id="project1">
-             
-            <div class="background">
-                <img src="images/api.png" alt="Фон 1">
-            </div>
-            <div class="onhover">
-                <h1 class="title">Rest API</h1>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button><a href="https://musical-medovik-679a46.netlify.app/">Offnen</a></button>
-            </div>
-        </div>
-
-        <div class="portfolio-nav" id="project2">
-            
-            <div class="background">
-                <img src="images/scroll.png" alt="Фон 2">
-            </div>
-            <div class="onhover">
-                <h1 class="title">Scroll Effect</h1>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button><a href="https://64fb9eb000d9d56bac8e1297--gregarious-kelpie-fc92a3.netlify.app/">Offnen</a></button>
-            </div>
-        </div>
-
-        <div class="portfolio-nav" id="project3">
-           
-            <div class="background">
-                <img src="images/shop.png" alt="Фон 3">
-            </div>
-            <div class="onhover">
-                <h1 class="title">E-Commerce</h1>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-               <button><a href="https://64fb8b27a1bc445783aec0d5--whimsical-shortbread-7bde7b.netlify.app/">Offnen</a></button>
-            </div>
-        </div>
+      <div class="portfolio-nav-container">
+        <!-- Контейнер для проектов -->
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/contentful@7.15.4/dist/contentful.min.js"></script>
+    <script>
+        // Идентификаторы вашего Contentful пространства и токен доступа
+        const spaceId = 'YOUR_SPACE_ID';
+        const accessToken = 'YOUR_ACCESS_TOKEN';
+
+        // Создаем клиент Contentful
+        const client = contentful.createClient({
+            space: spaceId,
+            accessToken: accessToken
+        });
+
+        // Функция для загрузки и отображения контента
+        function loadContent() {
+            client.getEntries()
+                .then((response) => {
+                    // Получаем записи (контент) из Contentful
+                    const projects = response.items;
+
+                    // Получаем контейнер для проектов
+                    const container = document.querySelector('.portfolio-nav-container');
+
+                    // Очищаем контейнер
+                    container.innerHTML = '';
+
+                    // Отображаем каждый проект
+                    projects.forEach((project) => {
+                        const projectDiv = document.createElement('div');
+                        projectDiv.classList.add('portfolio-nav');
+
+                        // Создаем HTML для проекта (подставьте свои поля из Contentful)
+                        projectDiv.innerHTML = `
+                            <div class="background">
+                                <img src="${project.fields.image.fields.file.url}" alt="${project.fields.title}">
+                            </div>
+                            <div class="onhover">
+                                <h1 class="title">${project.fields.title}</h1>
+                                <p class="description">${project.fields.description}</p>
+                                <button><a href="${project.fields.link}">Открыть</a></button>
+                            </div>
+                        `;
+
+                        // Добавляем проект в контейнер
+                        container.appendChild(projectDiv);
+                    });
+                })
+                .catch(console.error);
+        }
+
+        // Загружаем контент при загрузке страницы
+        loadContent();
+    </script>
 </div>
 
                 
