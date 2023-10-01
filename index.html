@@ -158,11 +158,9 @@ aber erstmal ohne Animation bitte </p>
             <div class="block portfolio" data-index="3">
     <h1 class="title-red">Portfolio</h1>
     <h1 class="title">I love what I do</h1>
-      <div class="portfolio-nav-container">
+       <div class="portfolio-nav-container">
         <!-- Контейнер для проектов -->
-    
-
-    
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/contentful@7.15.4/dist/contentful.min.js"></script>
     <script>
@@ -202,7 +200,7 @@ aber erstmal ohne Animation bitte </p>
                             <div class="onhover">
                                 <h1 class="title">${project.fields.title}</h1>
                                 <p class="description">${project.fields.description}</p>
-                                <button><a href="${project.fields.link}">Открыть</a></button>
+                                <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
                             </div>
                         `;
 
