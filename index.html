@@ -199,11 +199,11 @@ function loadContent() {
                 // Создаем HTML для проекта (подставьте свои поля из "CTA component")
                 projectDiv.innerHTML = `
                     <div class="background">
-                        <img src="${ctaComponent.image.fields.file.url}" alt="${ctaComponent.title}">
+                        <img src="${ctaComponent.img.fields.img.url}" alt="${ctaComponent.title}">
                     </div>
                     <div class="onhover">
-                        <h1 class="title">${ctaComponent.title}</h1>
-                        <p class="description">${ctaComponent.description}</p>
+                        <h1 class="title">${ctaComponent.headline}</h1>
+                        <p class="description">${ctaComponent.subline}</p>
                         <button><a href="${ctaComponent.link}" target="_blank">Открыть</a></button>
                     </div>
                 `;
