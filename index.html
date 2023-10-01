@@ -181,7 +181,8 @@ console.log("Script is running")
 // Функция для загрузки и отображения контента
 function loadContent() {
     client.getEntries()
-        .then((response) => {
+        .then((response) => { 
+            console.log(response);
             // Получаем записи (контент) из Contentful
             const projects = response.items;
 
