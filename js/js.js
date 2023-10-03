@@ -410,7 +410,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 function hideLetterU() {
-	const isMobile = window.matchMedia('(max-width: 750px)').matches
+	const isMobile = window.matchMedia(
+		'(max-width: 750px), (max-height: 550px)'
+	).matches
 	const title = document.querySelector('.aboutme .title')
 
 	if (isMobile) {
