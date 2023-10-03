@@ -461,7 +461,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .foto2 {max-width: 500vw; width: 50vw; margin-bottom: -20vh; margin-top: -10vh;}
         .textcontainer .title {margin-bottom: 4vh; font-size: 17vw; }
         .aboutme .description {width: 95%; margin-left: 2vw;}
-        .skills:optional {width: 90%; margin-top: 5vh; margin-left: 3dvw;}
+        .skills:optional {width: 70%; margin-top: 5vh; }
         .skills-container {margin-bottom: 4vh; margin-left: 2%;} .service {padding-top: 7%;} .service .service-container {flex-direction: column;}
         .service .title {font-size: 15vw; }
         .service .service-card {flex-direction: row; margin-left: 25%; width: 80%;}
