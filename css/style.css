@@ -463,8 +463,8 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .aboutme .description {width: 95%; margin-left: 2vw;}
         .skills:optional {width: 10vw; margin-top: 5vh; margin-left: 2vw; letter-spacing: 0.9px;}
         .skills-container {margin-bottom: 4vh; margin-left: 2%;} .service {padding-top: 7%;} .service .service-container {flex-direction: column;}
-        .service .title {font-size: 15vw; }
-        .service .service-card {flex-direction: row; margin-left: 25%; width: 80%;}
+        .service .title {font-size: 15vw; } .service .description {width: 90%;}
+        .service .service-card {flex-direction: row; margin-left: 24%; width: 85%;}
         .service .service-card img {width: 20vw; position: absolute; left: 3.5%; padding-top: 4%;  } .service .service-card .text-service {width: 85%;}
         .service .service-card .title {font-size: 7vw;}
         .reviews .title {margin-top: 5vh; font-size: 15vw;} .slider-nav {padding: 2vw; margin: 2vw;}
@@ -473,6 +473,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .portfolio-nav.open {height: 80vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
         .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
         .motto .service-card {flex-direction: column; margin: 4vh; width: 100%;}  .motto .title {font-size: 15vw;}
+        .service .service-card .title {margin-bottom: 1vh; margin-top: 4.7vh;}
         .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;} .motto .text-service .title {font-size: 7vw;}
         .availabel {height: 70vh; align-items: center; justify-content: center;} .availabel .title {width: 95%; margin-bottom: 2vh;} .reviews .title {font-size: 13vw;}
         .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
