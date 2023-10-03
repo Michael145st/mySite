@@ -470,7 +470,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .reviews .title {margin-top: 5vh; font-size: 15vw;} .slider-nav {padding: 2vw; margin: 2vw;}
         .portfolio {padding-top: 5vh;}  #project1 img {margin-left: 0%;} .portfolio .title {font-size: 15vw; width: 80%; text-align: center;}
         .portfolio-nav {height: 50vw; width: 80wv; min-width: 80vw; } 
-        .portfolio-nav.open {height: 65vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
+        .portfolio-nav.open {height: 75vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
         .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
         .motto .service-card {flex-direction: column; margin: 4vh; width: 100%;}  .motto .title {font-size: 15vw;}
         .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;} .motto .text-service .title {font-size: 7vw;}
