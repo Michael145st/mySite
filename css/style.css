@@ -367,6 +367,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
 
 .portfolio-nav.open .description {text-align: left; margin: 4%;}
+.portfolio-nav.open .title {padding-top: 2.5vh;}
 
 .portfolio-nav.open .background {
     /* Стили при ховере */
