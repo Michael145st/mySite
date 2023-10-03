@@ -387,7 +387,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
     content:  '̈';
     color: #8d2230;
     position: relative;
-    top: 0.05em; left: 0.187em; font-size: 72px;
+    top: -0.25em; left: 0.35em; font-size: 41px; 
 }
 
 
