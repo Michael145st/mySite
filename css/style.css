@@ -233,7 +233,7 @@ h1 {font-family: "Poppins"}
 .hireme {font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: bold; padding: 10px;  background-color: #84212e; color: white; border-radius: 5px; border: none;  width: 15vw; margin-top: 1vw;}
 
 .reviews {display: flex; flex-direction: column; align-items: center; justify-items: center; width: 100%; height: min-content;}
-.reviews .title {margin-top: 4vw; font-size: 4dvw;} 
+.reviews .title {margin-top: 4vw; font-size: 13vw;} 
 .reviews . .description {font-size: 19px;}
 .figure {color: #932635; font-size: 50px; line-height: 0.8; }
 .reviews .portrait {margin-bottom: 2vw;}
