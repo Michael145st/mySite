@@ -421,7 +421,7 @@ function hideLetterU() {
 		title.innerHTML = modifiedTextContent // Заменяем текст без буквы "U"
 	} else {
 		// Если медиа-запрос не соответствует, вернуть исходный текст
-		title.innerHTML = 'Uber mich'
+		title.innerHTML = 'Über mich'
 	}
 }
 
