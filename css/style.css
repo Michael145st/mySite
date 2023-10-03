@@ -407,7 +407,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             .foto2 {margin-top: -11vw;margin-right: -15vw; width: 23vw; margin-bottom: -4vw;}
             .skills-container {margin-top: -3vw; margin-bottom: 6vw; flex-direction: column; margin-left: 6vw; align-items: center; }
             .textcontainer {max-width: 60vw; margin-top: 1vw; margin-bottom: 1.5vw; }
-            .skills:optional {margin-bottom: 5vw; margin-left: 12.8%; margin-top: 3vw; padding: 3vw;}
+            .skills:optional {margin-bottom: 5vw; margin-left: 13.7%; margin-top: 3vw; padding: 3vw;}
             .skill {font-size: 10px; width: 80%; margin-top: 3vw; align-items: center; }
             .skill img {width: 80%; margin-top: -2vw;}
             .service-card {border-bottom: none;}
