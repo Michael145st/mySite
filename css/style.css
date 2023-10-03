@@ -207,12 +207,12 @@ h1 {font-family: "Poppins"}
 .aboutme {flex-direction: column; height: min-content; width: 100%; background-color: rgb(32, 32, 32); align-items: center;  vertical-align: middle}
 .fotos {display: flex; flex-direction: column; margin-top: 3vw; margin-left: 3vw; margin-bottom: 3vw; }
 .foto1 {max-width: 38vw; border-radius: 10px;}
-.foto2 {width: 16.5vw; border-radius: 10px; margin-top: -7.4vw; margin-left: 23vw; margin-right: -0.5dvw;}
+.foto2 {width: 16.5vw; border-radius: 10px; margin-top: -7.4vw; margin-left: 23vw; margin-right: -0.5vw;}
 .aboutme .description { margin-right: 4.5vw;  margin-top: 1vw; font-size: 16px;}
-.aboutme .title {line-height: 0.8; padding-top: 5dvh;}
+.aboutme .title {line-height: 0.8; padding-top: 5vh;}
 .info {flex-direction: row; display: flex; } 
 .textcontainer {display: flex; flex-direction: column;   justify-content: space-around; height: min-content; margin: auto; margin-left: 2.5vw; padding-bottom: 3vw; } 
-.skills:optional {width: min-content; white-space: nowrap; margin-top: 2vw; margin-left: 11dvw; padding: 1.3vw 2vw 1.3vw 2vw;  background-color: rgba(0, 0, 0, 0); border: 4px solid  #84212e; color: white; border-radius: 7px; font-size: 15px; letter-spacing: 1.6px;}
+.skills:optional {width: min-content; white-space: nowrap; margin-top: 2vw; margin-left: 11vw; padding: 1.3vw 2vw 1.3vw 2vw;  background-color: rgba(0, 0, 0, 0); border: 4px solid  #84212e; color: white; border-radius: 7px; font-size: 15px; letter-spacing: 1.6px;}
 .skills-container {display: none; justify-content: space-between;  margin: 0vw 5% 0vw 5%; width: 90%; margin-bottom: 4vw;}
 .skill {width: 20vw; justify-content: center; align-items: center; display: flex; flex-direction: column; color: white; font-size: 13px;}
 
@@ -221,7 +221,7 @@ h1 {font-family: "Poppins"}
 .service .title {margin-top: 4.5vw;}
 .text-service .title {margin-top: 2%; letter-spacing: 0.1px;}
 .service-container {display: flex; flex-direction: row; width: 100%; margin-right: 0; flex-wrap: wrap; justify-content: space-evenly; margin-top: 2vw; margin-bottom: 3vw; }
-.service-card {width: 45vw;  display: flex; flex-direction: row;  width: min-content; justify-content: space-evenly; width: 70vw; margin-right: 0vw; margin-bottom: 3vw; border-bottom: 0.5dvw solid #84212e; border-radius: 3%;}
+.service-card {width: 45vw;  display: flex; flex-direction: row;  width: min-content; justify-content: space-evenly; width: 70vw; margin-right: 0vw; margin-bottom: 3vw; border-bottom: 0.5vw solid #84212e; border-radius: 3%;}
 .service-card img {width: 12vw;}
 .text-service {height: min-content; margin: auto; margin-left: 1vw; min-width: 20vw;}
 .text-service .description {width: 100%; text-align: left; margin-top: 0vw; font-size: 16px;}
@@ -233,7 +233,7 @@ h1 {font-family: "Poppins"}
 .hireme {font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: bold; padding: 10px;  background-color: #84212e; color: white; border-radius: 5px; border: none;  width: 15vw; margin-top: 1vw;}
 
 .reviews {display: flex; flex-direction: column; align-items: center; justify-items: center; width: 100%; height: min-content;}
-.reviews .title {margin-top: 4vw;} 
+.reviews .title {margin-top: 4vw; font-size: 4dvw;} 
 .reviews . .description {font-size: 19px;}
 .figure {color: #932635; font-size: 50px; line-height: 0.8; }
 .reviews .portrait {margin-bottom: 2vw;}
@@ -433,7 +433,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             .service-card {min-width: 60vw;}
             .portfolio-nav:hover {transition: 0.6s ease-in-out; height: min-content;  margin-bottom: 4vh;
              /* Размытие при наведении */
-            transform: scale(1.1) translateY(2vh);} .portfolio-nav.open {height: 50vh; width: 50vw} .portfolio-nav.open .onhover button a {font-size: 1.75dvw;}          .motto .service-card {margin-bottom: 5vw; margin-top: 1vw;}
+            transform: scale(1.1) translateY(2vh);} .portfolio-nav.open {height: 50vh; width: 50vw} .portfolio-nav.open .onhover button a {font-size: 1.75vw;}          .motto .service-card {margin-bottom: 5vw; margin-top: 1vw;}
             
             .portfolio-nav + .portfolio-nav.open {margin-top: 7vh;}
             .motto {padding-top: 2vw;}
@@ -450,7 +450,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         }
 
 
-         @media screen and (max-width: 650px) { .portfolio-nav img {  padding-right: 60vw; }
+         @media screen and (max-width: 650px) { .portfolio-nav img {  padding-right: 0vw; }
           header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
         .home {background-position: -60vh bottom; background-attachment: scroll;}
         .home .description {width: 80%;} .home .down {margin-top: 6vh};
@@ -468,7 +468,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .service .service-card .title {font-size: 7vw;}
         .reviews .title {margin-top: 5vh; font-size: 15vw;} .slider-nav {padding: 2vw; margin: 2vw;}
         .portfolio {padding-top: 5vh;}  #project1 img {margin-left: 0%;} .portfolio .title {font-size: 15vw; width: 80%; text-align: center;}
-        .portfolio-nav {height: 32vh; width: 80wv; min-width: 80vw; } 
+        .portfolio-nav {height: 50vw; width: 80wv; min-width: 80vw; } 
         .portfolio-nav.open {height: 65vh; padding-top: 10%; padding-bottom: 10%;} .portfolio-nav.open .title {margin-top: 5%;}
         .portfolio-nav.open .onhover button a  {box-shadow: none; background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
         .motto .service-card {flex-direction: column; margin: 4vh; width: 100%;}  .motto .title {font-size: 15vw;}
@@ -476,7 +476,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .availabel {height: 70vh; align-items: center; justify-content: center;} .availabel .title {width: 95%; margin-bottom: 2vh;} .reviews .title {font-size: 15vw;}
         .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
-     .contactus {padding-top: 3vh;} .contactus .title {font-size: 13dvw; padding-bottom: 2vh;}
+     .contactus {padding-top: 3vh;} .contactus .title {font-size: 13vw; padding-bottom: 2vh;}
     .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh;} .contact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
   }
          
