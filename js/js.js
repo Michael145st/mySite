@@ -409,6 +409,24 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Ошибка при отправке сообщения в Telegram:', error);
         });
     });
+function hideLetterU() {
+	const isMobile = window.matchMedia('(max-width: 750px)').matches
+	const title = document.querySelector('.aboutme .title')
+
+	if (isMobile) {
+		const textContent = title.textContent
+		const modifiedTextContent = textContent.replace('U', '&#160;&#160;&#160;') // Удаляем букву "U"
+		title.innerHTML = modifiedTextContent // Заменяем текст без буквы "U"
+	} else {
+		// Если медиа-запрос не соответствует, вернуть исходный текст
+		title.innerHTML = 'Uber mich'
+	}
+}
+
+// Вызываем функцию при загрузке страницы и при изменении размера окна
+window.addEventListener('load', hideLetterU)
+window.addEventListener('resize', hideLetterU)
+
 
 
 
