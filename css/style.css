@@ -465,8 +465,8 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         .skills-container {margin-bottom: 4vh; margin-left: 2%;} .service {padding-top: 7%;} .service .service-container {flex-direction: column;}
         .service .title {font-size: 15vw; } .service .description {width: 90%; margin-bottom: 2%;}
         .service .service-card {flex-direction: row; margin-left: 7%; width: 97%;}
-        .service .service-card img {width: 60vw; position: absolute; left: 3.5%; ; margin-bottom: 5%;  } .service .service-card .text-service {width: 85%;}
-        .service .service-card .title {font-size: 7vw; padding-top: 50%;} .service .service-card .description {width: 100%;}
+        .service .service-card img {width: 60vw; position: absolute; left: 19%; ; margin-bottom: 5%;  } .service .service-card .text-service {width: 85%;}
+        .service .service-card .title {font-size: 7vw; padding-top: 52%;} .service .service-card .description {width: 100%;}
         .reviews .title {margin-top: 5vh; font-size: 15vw;} .slider-nav {padding: 2vw; margin: 2vw;}
         .portfolio {padding-top: 5vh;}   .portfolio .title {font-size: 15vw; width: 80%; text-align: center;}
         .portfolio-nav {height: 65vw; width: 80wv; min-width: 80vw; } 
