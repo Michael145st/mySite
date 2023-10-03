@@ -390,12 +390,12 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         }
 .arrow {align-content: center; justify-content: center; display: flex;}
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1332px) {
             
             button {white-space: nowrap; min-width: min-content;}
             header {width: 150px; border-right: solid rgb(48, 48, 48) 2px;}
             .portrait {width: 100px; height: 100px; margin-top: 1vw;}
-            main {margin-left: 140px; width: calc(100% - 143px); padding-left: -10%;}
+            main {margin-left: 145px; width: calc(100% - 150px); padding-left: -10%;}
             
 #scrollbar-track {left: 150px; top: 0%; height: 100%;}
 
@@ -411,7 +411,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             .skills:optional {margin-bottom: 5vw; margin-left: 13.7%; margin-top: 3vw; padding: 3vw;}
             .skill {font-size: 10px; width: 80%; margin-top: 3vw; align-items: center; }
             .skill img {width: 80%; margin-top: -2vw;}
-            .service-card {border-bottom: none;}
+            
             .service .description {width: 80%;}
             .service-card .description {width: 100%;}
             .service-card img {width: 20vw; margin-right: 2vw;}
@@ -451,7 +451,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
         }
 
 
-         @media screen and (max-width: 650px) { .portfolio-nav img {  padding-right: 0vw; }
+         @media screen and (max-width: 750px) { .portfolio-nav img {  padding-right: 0vw; } .service-card {border-bottom: none;}
           header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
         .home {background-position: -60vh bottom; background-attachment: scroll;}
         .home .description {width: 80%;} .home .down {margin-top: 6vh};
