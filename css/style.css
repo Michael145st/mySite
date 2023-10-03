@@ -120,7 +120,7 @@ overflow: hidden;
 }
 
 .nav {
-    display: flex;
+    display: flex; z-index: +100;
     flex-direction: column;
     overflow: hidden;
     margin-bottom: 25%;
@@ -481,4 +481,4 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
      .contactus {padding-top: 3vh;} .contactus .title {font-size: 13vw; padding-bottom: 2vh;} .description.nameR {margin-bottom: 4vh;}
     .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh;} .contact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
   }
-         
+         @media screen and (max-height: 681px) and (min-width: 750px) {header {display: none;} main {margin: 0; width: 100%;}}
