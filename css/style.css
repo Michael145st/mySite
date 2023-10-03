@@ -387,7 +387,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
     content:  '̈';
     color: #8d2230;
     position: relative;
-    top: 0.05em; left: 0.195em; font-size: 72px;
+    top: 0.05em; left: 0.187em; font-size: 72px;
 }
 
 
@@ -503,4 +503,9 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 } 
 
 }
-         @media screen and (max-height: 550px) and (min-width: 600px)  {header {display: none;} main {margin: 0; width: 100%;} .home {background-position: center;} .service-container {margin-top: -15vh;} .service .service-card .text-service .title {padding-top: 57%;} .availabel {height: min-content;} .hireme {font-size: 8vw; padding: 3vw;} .small-container {height: 50vh;} .small {margin: 0; margin-top: 3vw;} .contact-container {flex-direction: row;} .foto2 {width: 30vw; margin-top: -20vw; margin-left: 40vw;}}
+         @media screen and (max-height: 550px) and (min-width: 550px)  { .aboutme .title::before {
+    content:  'Ü';
+    color: #8d2230;
+    position: relative;
+    top: 0.02em; left: 0em; font-size: 9dvw; margin-right: -10dvw;
+} header {display: none;} main {margin: 0; width: 100%;} .home {background-position: center;} .service-container {margin-top: -15vh;} .service .service-card .text-service .title {padding-top: 57%;} .availabel {height: min-content;} .hireme {font-size: 8vw; padding: 3vw;} .small-container {height: 50vh;} .small {margin: 0; margin-top: 3vw;} .contact-container {flex-direction: row;} .foto2 {width: 30vw; margin-top: -20vw; margin-left: 40vw;} .aboutme .title {padding-left: 10dvw;}}
