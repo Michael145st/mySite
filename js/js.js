@@ -49,19 +49,31 @@ navButtons.forEach((button, index) => {
 
 
 // Получаем кнопку "Show my skills" и элемент секции skill-container
-const showSkillsButton = document.querySelector('.skills')
-const skillContainer = document.querySelector('.skills-container')
-const foto2 = document.querySelector(".foto2")
+const showSkillsButton = document.querySelector('.skills');
+const skillContainer = document.querySelector('.skills-container');
+const foto2 = document.querySelector(".foto2");
+
+// Устанавливаем начальное состояние кнопки
+let isSkillsVisible = false;
 
 // Добавляем обработчик события на кнопку "Show my skills"
 showSkillsButton.addEventListener('click', function () {
-	// При клике скрываем кнопку
-	showSkillsButton.style.display = 'none'
-    foto2.style.display = "none"
+  if (isSkillsVisible) {
+    // Если навыки видимы, скрываем их и меняем текст кнопки на "Show my skills"
+    skillContainer.style.display = 'none';
+    showSkillsButton.textContent = 'Anzeigen meine Fähigkeiten'
+    foto2.style.display = "flex";
+  } else {
+    // Если навыки скрыты, показываем их и меняем текст кнопки на "Hide my skills"
+    skillContainer.style.display = 'flex';
+    showSkillsButton.textContent = 'Ausblenden meine Fähigkeiten'
+    foto2.style.display = "none";
+  }
 
-	// Показываем секцию skill-container
-	skillContainer.style.display = 'flex'
-})
+  // Инвертируем состояние переменной
+  isSkillsVisible = !isSkillsVisible;
+});
+
 
 // Получаем все кнопки slider-nav и изображение
 const sliderNavButtons = document.querySelectorAll('.slider-nav')
@@ -388,7 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             if (data.ok) {
-                alert('Сообщение успешно отправлено в Telegram!');
+                alert('Dankeschön! Ihre Nachricht wurde erfolgereich gesendet');
             } else {
                 alert('Произошла ошибка при отправке сообщения в Telegram.');
             }
@@ -397,6 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Ошибка при отправке сообщения в Telegram:', error);
         });
     });
+
 
 
 
