@@ -212,7 +212,7 @@ h1 {font-family: "Poppins"}
 .aboutme .title {line-height: 0.8; padding-top: 5vh;}
 .info {flex-direction: row; display: flex; } 
 .textcontainer {display: flex; flex-direction: column;   justify-content: space-around; height: min-content; margin: auto; margin-left: 2.5vw; padding-bottom: 3vw; } 
-.skills:optional {width: min-content; white-space: nowrap; margin-top: 2vw; margin-left: 11vw; padding: 1.3vw 2vw 1.3vw 2vw;  background-color: rgba(0, 0, 0, 0); border: 4px solid  #84212e; color: white; border-radius: 7px; font-size: 15px; letter-spacing: 1.6px;}
+.skills:optional {width: min-content; white-space: nowrap; margin-top: 3.5vw; margin-left: 6vw; padding: 1.3vw 2vw 1.3vw 2vw;  background-color: rgba(0, 0, 0, 0); border: 4px solid  #84212e; color: white; border-radius: 7px; font-size: 15px; letter-spacing: 1.6px;}
 .skills-container {display: none; justify-content: space-between;  margin: 0vw 5% 0vw 5%; width: 90%; margin-bottom: 4vw;}
 .skill {width: 20vw; justify-content: center; align-items: center; display: flex; flex-direction: column; color: white; font-size: 13px;}
 
@@ -359,7 +359,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
 .portfolio-nav.open {cursor: auto; filter:  contrast(1) grayscale(0); 
     /* Стили при ховере */
-    height: 30vw;
+    height: 30vw; min-height: 400px;
     width: 27vw;
     margin: 0 3vw; 
     
@@ -379,16 +379,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
     filter: blur(9px) brightness(0.8);
     transform: scale(1);
 }
-.title {
-    color: white;
-}
 
-.aboutme .title::before {
-    content:  '̈'; 
-    color: #8d2230d4;
-    position: relative;
-    top: -0.22em; left: 0.352em; font-size: 42.5px; font-weight: bolder; font-stretch: condensed; border: #8d223000 solid 1px;
-}
 
 
         .portfolio-nav.open .onhover {border: none;
@@ -456,7 +447,7 @@ body.open-modal {
 
 
 
-        @media screen and (max-width: 1232px) { .close {right: 10px; top: -10px; font-size: 60px;}  .portfolio-nav.open .onhover button a  {box-shadow: none;  background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
+        @media screen and (max-width: 1300px) { .close {right: 10px; top: -10px; font-size: 60px;}  .portfolio-nav.open .onhover button a  {box-shadow: none;  background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
             button {white-space: nowrap; min-width: min-content;}
             header {width: 150px; border-right: solid rgb(48, 48, 48) 2px;}
             .portrait {width: 100px; height: 100px; margin-top: 1vw;}
@@ -486,8 +477,8 @@ body.open-modal {
             .slider-nav {padding: 0.7vw; margin: 2vw;}
             .slider-content .description {width: 100%;}
 
-            .availabel {height: min-content;}
-            .availabel .title {width: 70%; text-align: center; margin-top: 5vw;}
+            .availabel {height: 100vh; min-height: 100vh; margin-bottom: 10vh; }
+            .availabel .title {width: 70%; text-align: center; margin-top: 5vw; font-size: 80px;}
             .hireme {margin-bottom: 5vh; margin-top: 3vw;}
 
            .portfolio {height: min-content;}
@@ -509,7 +500,7 @@ body.open-modal {
             .small-container {height: 13vw; width: 65%;}
             .small {font-size: 15px;}
             .big {width: 100%; margin-left: 0; margin-top: 5vw; height: 23vw; font-size: 15px;}
-            .input-container {flex-direction: column; width: 80%; height: min-content; align-items: center;}
+            .input-container {flex-direction: row; width: 80%; height: min-content; align-items: center;}
             .contact {font-size: 10px; }
             .contact img {width: 5vw;}
             .b3 {font-size: 12px;} .beispiel { height: 30vh;}
@@ -517,7 +508,7 @@ body.open-modal {
         .motto .service-card .text-service .title {margin-bottom: 0.5vw;}
 
 
-         @media screen and (max-width: 750px) { .portfolio-nav img {  padding-right: 0vw; } .service-card {border-bottom: none;}
+         @media screen and (max-width: 800px) { .portfolio-nav img {  padding-right: 0vw; } .service-card {border-bottom: none;}
           header {display: none;} main {margin-left: 0px; width: 100%; } #scrollbar-track {left: 48px; top: 0%; height: 100%;}
         .home {background-position: -60vh bottom; background-attachment: scroll;}
         .home .description {width: 80%;} .home .down {margin-top: 6vh};
@@ -546,7 +537,7 @@ body.open-modal {
         .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
      .contactus {padding-top: 3vh;} .contactus .title {font-size: 13vw; padding-bottom: 2vh;} .description.nameR {margin-bottom: 4vh;}
-    .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh;} .con tact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
+    .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh; align-items: center;} .input-container {flex-direction: column;} .con tact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
 .beispiel {height: 25vh; width: 70vw;} .modal-content {padding: 0;} #openModalButton {margin: auto; position: static; margin-top: 4vh; margin-bottom: -4vh;}
 }
          @media screen and (max-height: 550px) and (min-width: 550px)  { .aboutme .title::before {
