@@ -456,7 +456,7 @@ body.open-modal {
 
 
 
-        @media screen and (max-width: 1332px) { .close {right: 10px; top: -10px;} 
+        @media screen and (max-width: 1332px) { .close {right: 10px; top: -10px; font-size: 60px;} 
             button {white-space: nowrap; min-width: min-content;}
             header {width: 150px; border-right: solid rgb(48, 48, 48) 2px;}
             .portrait {width: 100px; height: 100px; margin-top: 1vw;}
