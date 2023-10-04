@@ -456,7 +456,7 @@ body.open-modal {
 
 
 
-        @media screen and (max-width: 1332px) { .close {right: 30px; top: 0;} 
+        @media screen and (max-width: 1332px) { .close {right: 10px; top: -10px;} 
             button {white-space: nowrap; min-width: min-content;}
             header {width: 150px; border-right: solid rgb(48, 48, 48) 2px;}
             .portrait {width: 100px; height: 100px; margin-top: 1vw;}
@@ -546,7 +546,7 @@ body.open-modal {
         .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
      .contactus {padding-top: 3vh;} .contactus .title {font-size: 13vw; padding-bottom: 2vh;} .description.nameR {margin-bottom: 4vh;}
-    .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh;} .contact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
+    .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 40vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh;} .con tact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
 .beispiel {height: 25vh; width: 70vw;} .modal-content {padding: 0;} #openModalButton {margin: auto; position: static; margin-top: 4vh; margin-bottom: -4vh;}
 }
          @media screen and (max-height: 550px) and (min-width: 550px)  { .aboutme .title::before {
