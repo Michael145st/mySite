@@ -456,7 +456,7 @@ body.open-modal {
 
 
 
-        @media screen and (max-width: 1332px) { .close {right: 10px; top: -10px; font-size: 60px;} 
+        @media screen and (max-width: 1332px) { .close {right: 10px; top: -10px; font-size: 60px;}  .portfolio-nav.open .onhover button a  {box-shadow: none;  background-color: inherit; color: white; font-size: 30dwv; width: 100%; font-size: larger; line-height: 8; text-align: center; justify-content: space-around;}
             button {white-space: nowrap; min-width: min-content;}
             header {width: 150px; border-right: solid rgb(48, 48, 48) 2px;}
             .portrait {width: 100px; height: 100px; margin-top: 1vw;}
