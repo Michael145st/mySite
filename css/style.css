@@ -414,7 +414,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
     left: 0;
     width: 100%;
     height: 0; /* Изначально скрыто */
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #1e1e1e;
     overflow: hidden;
     transition: 0.5s; /* Добавляем анимацию */
 }
@@ -423,7 +423,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
     background-color: #1e1e1e;  z-index: +99999; position: absolute;  display: flex; align-items: center; align-content: stretch; flex-direction: column; justify-content: space-evenly;
     margin: 0 auto;
     padding: 20px;
-    border: none;
+    border: none; margin-left: -5%;
     min-width: 100%; height: 100%; color: #ffffff;
     
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
