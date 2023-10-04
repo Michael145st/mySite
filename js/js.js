@@ -410,6 +410,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+// Находим кнопку и модальное окно
+var openModalButton = document.getElementById("openModalButton");
+var fullscreenModal = document.getElementById("fullscreenModal");
+var closeModalButton = document.getElementById("closeModalButton");
+
+// Открывает модальное окно
+openModalButton.addEventListener("click", function() {
+    fullscreenModal.style.display = "block";
+});
+
+// Закрывает модальное окно
+closeModalButton.addEventListener("click", function() {
+    fullscreenModal.style.display = "none";
+});
+
+// Закрывает модальное окно при клике вне его
+window.addEventListener("click", function(event) {
+    if (event.target == fullscreenModal) {
+        fullscreenModal.style.display = "none";
+    }
+});// Находим кнопку и модальное окно
+var openModalButton = document.getElementById("openModalButton");
+var fullscreenModal = document.getElementById("fullscreenModal");
+var closeModalButton = document.getElementById("closeModalButton");
+var body = document.body;
+
+// Открывает модальное окно
+openModalButton.addEventListener("click", function() {
+    fullscreenModal.classList.add("open"); // Добавляем класс "open"
+    body.classList.add("open-modal"); // Добавляем класс для отключения скроллинга
+});
+
+// Закрывает модальное окно
+closeModalButton.addEventListener("click", function() {
+    fullscreenModal.classList.remove("open"); // Убираем класс "open"
+    body.classList.remove("open-modal"); // Убираем класс для включения скроллинга
+});
+
+// Закрывает модальное окно при клике вне его
+window.addEventListener("click", function(event) {
+    if (event.target == fullscreenModal) {
+        fullscreenModal.classList.remove("open"); // Убираем класс "open"
+        body.classList.remove("open-modal"); // Убираем класс для включения скроллинга
+    }
+});
+
 
 
 
