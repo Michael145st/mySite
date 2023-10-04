@@ -464,6 +464,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
             .contact img {width: 5vw;}
             .b3 {font-size: 12px;}
         }
+        .motto .service-card .text-service .title {margin-bottom: 0.5vw;}
 
 
          @media screen and (max-width: 750px) { .portfolio-nav img {  padding-right: 0vw; } .service-card {border-bottom: none;}
