@@ -357,7 +357,7 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 .portfolio-nav:hover {filter:  contrast(1.3) grayscale(0); transition: 0.5s ease-in-out; scale: 1.05;   transform: translateY(0.7vh);  }
 .portfolio-nav.open:hover  {filter: none; scale: none; transform: none;}
 
-.portfolio-nav.open {cursor: auto; filter:  contrast(1) grayscale(0); 
+.portfolio-nav.open {cursor: auto; filter:  contrast(1) grayscale(0);  transition: all 1s ease-out;
     /* Стили при ховере */
     height: 30vw; min-height: 400px;
     width: 27vw;
