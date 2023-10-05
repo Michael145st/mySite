@@ -243,7 +243,7 @@ h1 {font-family: "Poppins"}
 .slider-nav:hover {  border-radius: 0.2vw; scale: 1.3; filter: brightness(1.3); transition: 0.1s ease;}
 
 .selected {background-color: #84212e; scale: 1.3;}
-.portfolio {flex-direction: column; height: min-content; width: 100%;  background-color: rgb(23, 23, 23); align-items: center;  vertical-align: middle}
+.portfolio {transform:ease-in; flex-direction:  column; height: min-content; width: 100%;  background-color: rgb(23, 23, 23); align-items: center;  vertical-align: middle}
 .portfolio .title-red {margin-top: 4vw; margin-bottom: 0.1vw; }
 .portfolio-nav-container {width: 90%; flex-direction: row; display: flex; justify-content: space-around; margin-top: 6vh; margin-bottom: 8vw;} 
 .portfolio-nav {width: 18vw; background-color: #84212e; height: 18vw; background-image: url(images/трини.jpg); border-radius: 2vw; border-bottom:4vh ; display: flex; align-items: center; justify-content: space-around; position: absolute; }
@@ -490,7 +490,7 @@ body.open-modal {
             .service-card {min-width: 60vw;}
             .portfolio-nav:hover {transition: 0.6s ease-in-out; scale: 1.05;  margin-bottom: 4vh;
              /* Размытие при наведении */
-            transform: scale(1.1) translateY(2vh);} .portfolio-nav.open {height: 50vh; width: 50vw} .portfolio-nav.open .onhover button a {font-size: 1.75vw;}          .motto .service-card {margin-bottom: 5vw; margin-top: 1vw;}
+            transform: scale(1.1) translateY(2vh);} .portfolio-nav.open {height: 50vh; width: 50vw} .portfolio-nav.open .onhover button a {font-size: 1.55vw;}          .motto .service-card {margin-bottom: 5vw; margin-top: 1vw;}
             
             .portfolio-nav + .portfolio-nav.open {margin-top: 7vh;}
             .motto {padding-top: 2vw;}
