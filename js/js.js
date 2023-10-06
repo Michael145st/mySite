@@ -438,14 +438,14 @@ document
 
 		// Проверка на заполнение обязательных полей
 		if (name === '' || email === '' || message === '') {
-			alert('Пожалуйста, заполните все обязательные поля.')
+			alert('Fühlen Sie alle benotige Pfelder aus, bitte')
 			return // Останавливаем выполнение функции
 		}
 
 		// Проверка на корректность email с использованием регулярного выражения
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 		if (!emailRegex.test(email)) {
-			alert('Пожалуйста, введите корректный email.')
+			alert('Schreiben Sie eine Korrekte E-Mail, bitte.')
 			return // Останавливаем выполнение функции
 		}
 
@@ -476,7 +476,7 @@ document
 					document.getElementById('email').value = ''
 					document.getElementById('message').value = ''
 				} else {
-					alert('Произошла ошибка при отправке сообщения в Telegram.')
+					alert('Es wurde nicht geklapt!.')
 				}
 			})
 			.catch(error => {
