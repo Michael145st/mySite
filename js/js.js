@@ -374,42 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-    document.getElementById('sendButton').addEventListener('click', function () {
-        const name = document.getElementById('name').value;
-        const company = document.getElementById('company').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // Замените 'YOUR_BOT_TOKEN' на токен вашего бота Telegram
-        const botToken = '6495569227:AAFWgyr05DE59rVVz9WtbG1hW2P7LK6gsm8'
-        // Замените 'CHAT_ID' на ID чата, в который вы хотите отправить сообщение
-        const chatId = '-1001901970344'
-
-        const text = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nMessage: ${message}`;
-
-        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: text,
-            }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                alert('Dankeschön! Ihre Nachricht wurde erfolgereich gesendet');
-            } else {
-                alert('Произошла ошибка при отправке сообщения в Telegram.');
-            }
-        })
-        .catch(error => {
-            console.error('Ошибка при отправке сообщения в Telegram:', error);
-        });
-    });
-
+  
 // Находим кнопку и модальное окно
 var openModalButton = document.getElementById("openModalButton");
 var fullscreenModal = document.getElementById("fullscreenModal");
@@ -462,5 +427,61 @@ window.addEventListener("click", function(event) {
 
 
 
+document
+	.getElementById('sendButton')
+	.addEventListener('click', function (event) {
+		event.preventDefault() // Отменяем стандартное поведение отправки формы
+
+		const name = document.getElementById('name').value.trim()
+		const email = document.getElementById('email').value.trim()
+		const message = document.getElementById('message').value.trim()
+
+		// Проверка на заполнение обязательных полей
+		if (name === '' || email === '' || message === '') {
+			alert('Пожалуйста, заполните все обязательные поля.')
+			return // Останавливаем выполнение функции
+		}
+
+		// Проверка на корректность email с использованием регулярного выражения
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+		if (!emailRegex.test(email)) {
+			alert('Пожалуйста, введите корректный email.')
+			return // Останавливаем выполнение функции
+		}
+
+		// Если все проверки прошли успешно, можно отправить данные
+		const company = document.getElementById('company').value.trim()
+
+		const botToken = '6495569227:AAFWgyr05DE59rVVz9WtbG1hW2P7LK6gsm8'
+		const chatId = '-1001901970344'
+		const text = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nMessage: ${message}`
+
+		fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				chat_id: chatId,
+				text: text,
+			}),
+		})
+			.then(response => response.json())
+			.then(data => {
+				if (data.ok) {
+					alert('Dankeschön! Ihre Nachricht wurde erfolgereich gesendet.')
+					// Очищаем поля формы после успешной отправки
+					document.getElementById('name').value = ''
+					document.getElementById('company').value = ''
+					document.getElementById('email').value = ''
+					document.getElementById('message').value = ''
+				} else {
+					alert('Произошла ошибка при отправке сообщения в Telegram.')
+				}
+			})
+			.catch(error => {
+				console.error('Ошибка при отправке сообщения в Telegram:', error)
+			})
+	})
 
 
