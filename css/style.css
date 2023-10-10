@@ -152,7 +152,7 @@ main {
     margin-left: 255px; width: calc(100% - 255.5px); margin-right: 5%;
    margin-top: 0;
    margin-bottom: 0;
-    background-color: rgba(118, 118, 118, 0.504);
+    background-color: rgba(120, 119, 119, 0.504);
    overflow-x: hidden;
     scroll-snap-type: y proximity;
     padding: 0;
@@ -205,9 +205,9 @@ h1 {font-family: "Poppins"}
 
 
 .aboutme {flex-direction: column; height: min-content; width: 100%; background-color: rgb(32, 32, 32); align-items: center;  vertical-align: middle}
-.fotos {display: flex; flex-direction: column; margin-top: 3vw; margin-left: 3vw; margin-bottom: 3vw; }
-.foto1 {max-width: 38vw; border-radius: 10px;}
-.foto2 {width: 16.5vw; border-radius: 10px; margin-top: -7.4vw; margin-left: 23vw; margin-right: -0.5vw;}
+.fotos {display: flex; flex-direction: column; margin-top: 3vw; margin-left: 3vw; margin-bottom: 3vw;  }
+.foto1 {max-width: 38vw; border-radius: 10px; border: 0.2vw #CDC7C7 solid;}
+.foto2 {width: 16.5vw; border-radius: 10px; margin-top: -6.8vw; margin-left: 23vw; margin-right: -0.5vw;  border: none;}
 .aboutme .description { margin-right: 4.5vw;  margin-top: 1vw; font-size: 16px;}
 .aboutme .title {line-height: 0.8; padding-top: 5vh;}
 .info {flex-direction: row; display: flex; } 
