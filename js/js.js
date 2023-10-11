@@ -61,12 +61,12 @@ showSkillsButton.addEventListener('click', function () {
   if (isSkillsVisible) {
     // Если навыки видимы, скрываем их и меняем текст кнопки на "Show my skills"
     skillContainer.style.display = 'none';
-    showSkillsButton.textContent = 'Anzeigen meine Fähigkeiten'
+    showSkillsButton.textContent = 'meine Fähigkeiten anzeigen'
     foto2.style.display = "flex";
   } else {
     // Если навыки скрыты, показываем их и меняем текст кнопки на "Hide my skills"
     skillContainer.style.display = 'flex';
-    showSkillsButton.textContent = 'Ausblenden meine Fähigkeiten'
+    showSkillsButton.textContent = 'meine Fähigkeiten ausblenden'
     foto2.style.display = "none";
   }
 
