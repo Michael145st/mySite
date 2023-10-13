@@ -165,6 +165,34 @@ sliderNavButtons.forEach((button, index) => {
 // Изначально устанавливаем первый слайд и начинаем автоматическую смену
 changeSlide(currentIndex);
 
+let touchStartX = 0 // Начальная позиция касания
+
+// Обработчик начала касания
+document.addEventListener('touchstart', function (e) {
+	touchStartX = e.touches[0].clientX
+})
+
+// Обработчик движения касания
+document.addEventListener('touchmove', function (e) {
+	// Здесь вы можете реагировать на движение пальца, если это необходимо
+})
+
+// Обработчик завершения касания (свайп)
+document.addEventListener('touchend', function (e) {
+	const touchEndX = e.changedTouches[0].clientX
+	const swipeDistance = touchEndX - touchStartX
+
+	if (swipeDistance > 50) {
+		// Если свайп вправо (по направлению увеличения индекса)
+		const nextIndex = (currentIndex + 1) % sliderNavButtons.length
+		changeSlide(nextIndex)
+	} else if (swipeDistance < -50) {
+		// Если свайп влево (по направлению уменьшения индекса)
+		const prevIndex =
+			(currentIndex - 1 + sliderNavButtons.length) % sliderNavButtons.length
+		changeSlide(prevIndex)
+	}
+})
 
     // Получаем ссылки на все обязательные элементы ввода
    
