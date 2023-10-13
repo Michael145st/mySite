@@ -165,34 +165,45 @@ sliderNavButtons.forEach((button, index) => {
 // Изначально устанавливаем первый слайд и начинаем автоматическую смену
 changeSlide(currentIndex);
 
-let touchStartX = 0 // Начальная позиция касания
+let touchStartX = 0
+let touchEndX = 0
 
-// Обработчик начала касания
 document.addEventListener('touchstart', function (e) {
 	touchStartX = e.touches[0].clientX
 })
 
-// Обработчик движения касания
-document.addEventListener('touchmove', function (e) {
-	// Здесь вы можете реагировать на движение пальца, если это необходимо
-})
-
-// Обработчик завершения касания (свайп)
 document.addEventListener('touchend', function (e) {
-	const touchEndX = e.changedTouches[0].clientX
-	const swipeDistance = touchEndX - touchStartX
-
-	if (swipeDistance > 50) {
-		// Если свайп вправо (по направлению увеличения индекса)
-		const nextIndex = (currentIndex + 1) % sliderNavButtons.length
-		changeSlide(nextIndex)
-	} else if (swipeDistance < -50) {
-		// Если свайп влево (по направлению уменьшения индекса)
-		const prevIndex =
-			(currentIndex - 1 + sliderNavButtons.length) % sliderNavButtons.length
-		changeSlide(prevIndex)
-	}
+	touchEndX = e.changedTouches[0].clientX
+	handleSwipe()
 })
+
+function handleSwipe() {
+	const swipeDistance = touchEndX - touchStartX
+	if (Math.abs(swipeDistance) > 50) {
+		if (swipeDistance > 0) {
+			const nextIndex = (currentIndex + 1) % sliderNavButtons.length
+			changeSlide(nextIndex)
+		} else {
+			const prevIndex =
+				(currentIndex - 1 + sliderNavButtons.length) % sliderNavButtons.length
+			changeSlide(prevIndex)
+		}
+	}
+}
+
+function changeSlide(index) {
+	if (index !== currentIndex) {
+		sliderNavButtons[currentIndex].classList.remove('selected')
+		sliderItems[currentIndex].style.display = 'none'
+		currentIndex = index
+		sliderNavButtons[currentIndex].classList.add('selected')
+		sliderItems[currentIndex].style.display = 'flex'
+		const newContent = sliderItems[currentIndex].getAttribute('data-content')
+		// Обновите контент на странице, используя newContent
+	}
+}
+
+changeSlide(currentIndex)
 
     // Получаем ссылки на все обязательные элементы ввода
    
