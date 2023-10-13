@@ -76,61 +76,30 @@ showSkillsButton.addEventListener('click', function () {
 
 
 // Получаем все кнопки slider-nav и изображение
-const sliderNavButtons = document.querySelectorAll('.slider-nav')
-const sliderImage = document.querySelector('.reviews .portrait')
-const sliderItems = document.querySelectorAll('.slider-item')
+const sliderNavButtons = document.querySelectorAll('.slider-nav');
+const sliderImage = document.querySelector('.reviews .portrait');
+const sliderItems = document.querySelectorAll('.slider-item');
 
-// Добавляем обработчик события для каждой кнопки
-sliderNavButtons.forEach(function (button, index) {
-	button.addEventListener('click', function () {
-		// Убираем класс 'selected' у всех кнопок
-		sliderNavButtons.forEach(function (btn) {
-			btn.classList.remove('selected')
-		})
-
-		// Добавляем класс 'selected' только к текущей кнопке
-		button.classList.add('selected')
-
-		// Заменяем src атрибут изображения на соответствующий путь
-		var imgSrc = sliderItems[index].getAttribute('data-img-src')
-		sliderImage.src = imgSrc
-
-		// Скрываем все слайды
-		sliderItems.forEach(function (item) {
-			item.style.display = 'none'
-		})
-
-		// Показываем текущий слайд
-		sliderItems[index].style.display = 'flex'
-	})
-})
-// ... (весь предыдущий код)
-
-let currentIndex = 0 // Индекс активного слайда
-let autoChangeTimer // Таймер для автоматической смены слайдов
+let currentIndex = 0; // Индекс активного слайда
+let autoChangeTimer; // Таймер для автоматической смены слайдов
 
 // Функция для смены слайда по индексу
 function changeSlide(index) {
-	if (index !== currentIndex) {
-		// Убираем класс 'selected' у текущей кнопки и скрываем текущий слайд
-		sliderNavButtons[currentIndex].classList.remove('selected')
-		sliderItems[currentIndex].style.display = 'none'
-
-		// Устанавливаем новый индекс слайда
-		currentIndex = index
-
-		// Добавляем класс 'selected' к новой кнопке и показываем новый слайд
-		sliderNavButtons[currentIndex].classList.add('selected')
-		sliderItems[currentIndex].style.display = 'flex'
-	}
+    if (index !== currentIndex) {
+        sliderNavButtons[currentIndex].classList.remove('selected');
+        sliderItems[currentIndex].style.display = 'none';
+        currentIndex = index;
+        sliderNavButtons[currentIndex].classList.add('selected');
+        sliderItems[currentIndex].style.display = 'flex';
+        const newContent = sliderItems[currentIndex].getAttribute('data-content');
+        // Обновите контент на странице, используя newContent
+    }
 }
 
 // Функция для автоматической смены слайдов
 function autoChangeSlide() {
     const nextIndex = (currentIndex + 1) % sliderNavButtons.length;
     changeSlide(nextIndex);
-
-    // Обновляем src атрибут изображения на соответствующий путь
     var imgSrc = sliderItems[nextIndex].getAttribute('data-img-src');
     sliderImage.src = imgSrc;
 }
@@ -144,19 +113,13 @@ const slideShowDurationAfterClick = 8000;
 // Обработчик клика на кнопках слайдера
 sliderNavButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-        clearTimeout(autoChangeTimer); // Остановка текущего таймера
-
-        // Изменяем слайд на тот, на который кликнули
+        clearTimeout(autoChangeTimer);
         changeSlide(index);
-
-        // Обновляем src атрибут изображения на соответствующий путь
         var imgSrc = sliderItems[index].getAttribute('data-img-src');
         sliderImage.src = imgSrc;
 
-        // Устанавливаем новый таймер для автоматической смены после заданной задержки
         autoChangeTimer = setTimeout(() => {
             autoChangeSlide();
-            // Возобновляем автоматическую смену с интервалом
             autoChangeTimer = setInterval(autoChangeSlide, 2000);
         }, slideShowDurationAfterClick);
     });
@@ -165,45 +128,32 @@ sliderNavButtons.forEach((button, index) => {
 // Изначально устанавливаем первый слайд и начинаем автоматическую смену
 changeSlide(currentIndex);
 
-let touchStartX = 0
-let touchEndX = 0
+// Добавляем обработчики свайпа на мобильных устройствах
+let touchStartX = 0;
+let touchEndX = 0;
 
-document.addEventListener('touchstart', function (e) {
-	touchStartX = e.touches[0].clientX
-})
+document.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+});
 
-document.addEventListener('touchend', function (e) {
-	touchEndX = e.changedTouches[0].clientX
-	handleSwipe()
-})
+document.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
 
 function handleSwipe() {
-	const swipeDistance = touchEndX - touchStartX
-	if (Math.abs(swipeDistance) > 50) {
-		if (swipeDistance > 0) {
-			const nextIndex = (currentIndex + 1) % sliderNavButtons.length
-			changeSlide(nextIndex)
-		} else {
-			const prevIndex =
-				(currentIndex - 1 + sliderNavButtons.length) % sliderNavButtons.length
-			changeSlide(prevIndex)
-		}
-	}
+    const swipeDistance = touchEndX - touchStartX;
+    if (Math.abs(swipeDistance) > 50) {
+        if (swipeDistance > 0) {
+            const prevIndex = (currentIndex - 1 + sliderNavButtons.length) % sliderNavButtons.length;
+            changeSlide(prevIndex);
+        } else {
+            const nextIndex = (currentIndex + 1) % sliderNavButtons.length;
+            changeSlide(nextIndex);
+        }
+    }
 }
 
-function changeSlide(index) {
-	if (index !== currentIndex) {
-		sliderNavButtons[currentIndex].classList.remove('selected')
-		sliderItems[currentIndex].style.display = 'none'
-		currentIndex = index
-		sliderNavButtons[currentIndex].classList.add('selected')
-		sliderItems[currentIndex].style.display = 'flex'
-		const newContent = sliderItems[currentIndex].getAttribute('data-content')
-		// Обновите контент на странице, используя newContent
-	}
-}
-
-changeSlide(currentIndex)
 
     // Получаем ссылки на все обязательные элементы ввода
    
