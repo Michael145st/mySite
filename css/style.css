@@ -102,7 +102,7 @@ overflow: hidden;
 }
 .myportrait  {
     width: 100%;
-    height: 150px; border-radius: 50%; border: solid 0.2vw #84212e ;
+    height: 150px; border-radius: 50%; border: solid 0.2vw #84212e ; border-bottom: 0.3vw solid  #84212e;
     
     margin: 0; ;
 }
@@ -540,11 +540,11 @@ body.open-modal {
         .service .service-card .title {margin-bottom: 1vh; margin-top: 4.7vh;}
         .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;} .motto .text-service .title {font-size: 7vw;}
         .availabel {height: 70vh; align-items: center; justify-content: center;} .availabel .title {width: 95%; margin-bottom: 2vh;} .reviews .title {font-size: 13vw;}
-        .small-container {height: 62vw; width: 85%;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
+        .small-container {height: 62vw; width: 85%; margin-top: 1vh;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
      .contactus {padding-top: 3vh;} .contactus .title {font-size: 13vw; padding-bottom: 2vh;} .description.nameR {margin-bottom: 4vh;}
-    .big {width: 90vw; margin-left: -1vw; margin-bottom: 2vh; height: 30vh;} .contact-container {flex-direction: column; width: 100%; margin-top: 7vh; align-items: center;} .input-container {flex-direction: column;} .con tact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
-.beispiel {height: 25vh; width: 70vw;} .modal-content {padding: 0;} #openModalButton {margin: auto; position: static; margin-top: 4vh; margin-bottom: -4vh;}
+    .big {width: 99%; padding-top: 2vw; margin-left: 1vw; margin-bottom: 0; height: 30vh; text-align: center; border-bottom-width:01vw ; } .contact-container {flex-direction: column; width: 100%; margin-top: 7vh; align-items: center;} .input-container {flex-direction: column; background-color: rgba(42, 42, 42, 0.784); width:80%; padding-left: 0; padding-right: 0; border-radius: 3vw;} input {text-align: center; border-bottom-width:01vw ; } .contact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
+.beispiel {height: 25vh; width: 70vw;} .modal-content {padding: 0;} #openModalButton {margin: auto; position: static; margin-top: 4vh; margin-bottom: -4vh;} .send {width: 80vw;} .send.mana {margin-top: 8vw;}
 }
          @media screen and (max-height: 550px) and (min-width: 550px)  {  header {display: none;} main {margin: 0; width: 100%;} .home {background-position: center;} .service-container {margin-top: -15vh;} .service .service-card .text-service .title {padding-top: 57%;} .availabel {height: min-content;} .hireme {font-size: 8vw; padding: 3vw;} .small-container {height: 50vh;} .small {margin: 0; margin-top: 3vw;} .contact-container {flex-direction: row;} .foto2 {width: 30vw; margin-top: -20vw; margin-left: 40vw;} .arrow.active {scale: 0.8;}}
 
