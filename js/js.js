@@ -141,18 +141,7 @@ document.addEventListener('touchend', function(e) {
     handleSwipe();
 });
 
-function handleSwipe() {
-    const swipeDistance = touchEndX - touchStartX;
-    if (Math.abs(swipeDistance) > 50) {
-        if (swipeDistance > 0) {
-            const prevIndex = (currentIndex - 1 + sliderNavButtons.length) % sliderNavButtons.length;
-            changeSlide(prevIndex);
-        } else {
-            const nextIndex = (currentIndex + 1) % sliderNavButtons.length;
-            changeSlide(nextIndex);
-        }
-    }
-}
+
 
 
     // Получаем ссылки на все обязательные элементы ввода
