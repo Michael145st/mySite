@@ -58,21 +58,24 @@ let isSkillsVisible = false;
 
 // Добавляем обработчик события на кнопку "Show my skills"
 showSkillsButton.addEventListener('click', function () {
-  if (isSkillsVisible) {
-    // Если навыки видимы, скрываем их и меняем текст кнопки на "Show my skills"
-    skillContainer.style.display = 'none';
-    showSkillsButton.textContent = 'Meine Fähigkeiten anzeigen'
-    foto2.style.display = "flex";
-  } else {
-    // Если навыки скрыты, показываем их и меняем текст кнопки на "Hide my skills"
-    skillContainer.style.display = 'flex';
-    showSkillsButton.textContent = 'Meine Fähigkeiten ausblenden'
-    foto2.style.display = "none";
-  }
+	if (isSkillsVisible) {
+		// Если навыки видимы, скрываем их и меняем текст кнопки на "Show my skills"
+		skillContainer.style.display = 'none'
+		showSkillsButton.textContent = 'Meine Fähigkeiten anzeigen'
+		foto2.style.display = 'flex'
+		showSkillsButton.style.background =
+			'conic-gradient(from 30deg, #84212e 0deg 180deg, transparent 180deg 360deg)'
+	} else {
+		// Если навыки скрыты, показываем их и меняем текст кнопки на "Hide my skills"
+		skillContainer.style.display = 'flex'
+		showSkillsButton.style.background = '#84212e'
+		showSkillsButton.textContent = 'Meine Fähigkeiten ausblenden'
+		foto2.style.display = 'none'
+	}
 
-  // Инвертируем состояние переменной
-  isSkillsVisible = !isSkillsVisible;
-});
+	// Инвертируем состояние переменной
+	isSkillsVisible = !isSkillsVisible
+})
 
 
 // Получаем все кнопки slider-nav и изображение
@@ -141,7 +144,18 @@ document.addEventListener('touchend', function(e) {
     handleSwipe();
 });
 
-
+function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+    if (Math.abs(swipeDistance) > 50) {
+        if (swipeDistance > 0) {
+            const prevIndex = (currentIndex - 1 + sliderNavButtons.length) % sliderNavButtons.length;
+            changeSlide(prevIndex);
+        } else {
+            const nextIndex = (currentIndex + 1) % sliderNavButtons.length;
+            changeSlide(nextIndex);
+        }
+    }
+} 
 
 
     // Получаем ссылки на все обязательные элементы ввода
