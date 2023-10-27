@@ -567,7 +567,7 @@ body.open-modal {
         .service .service-card .title {margin-bottom: 1vh; margin-top: 4.7vh;}
         .motto .service-card img {position: static; width: 30vw; margin-bottom: 1vh;} .motto .text-service .title {font-size: 7vw;}
         .availabel {height: 70vh; align-items: center; justify-content: center;} .availabel .title {width: 95%; margin-bottom: 2vh;} .reviews .title {font-size: 13vw;}
-        .small-container {height: 62vw; width: 85%; margin-top: 1vh;} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
+        .small-container {height: 62vw; width: 85%; margin-top: 1vh; margin-right: 0} .small {height: 6vh;  margin: 5vw; } .input-container {width: 100%; margin: 0; margin-top: 3vh;} 
     .portfolio-nav + .portfolio-nav.open {margin-top: 5vh;}
      .contactus {padding-top: 3vh;} .contactus .title {font-size: 13vw; padding-bottom: 2vh;} .description.nameR {margin-bottom: 4vh;}
     .big {width: 99%; padding-top: 2vw; margin-left: 1vw; margin-bottom: 0; height: 20vh; text-align: center; border-bottom-width:01vw ; } .contact-container {flex-direction: column; width: 100%; margin-top: 7vh; align-items: center;} .input-container {flex-direction: column; background-color: rgba(42, 42, 42, 0.784); width:80%; padding-left: 0; padding-right: 0; border-radius: 3vw; border: 0.5vw solid #000000ae; border-bottom-width:0vw ;} input {text-align: center; border-bottom-width:01vw ; } .contact {width: 100%; margin: 0; margin-bottom: 5vh;} .contact img {width: 15vw;} .arrow.arrow {transform: translateY(-8vh) translateX(2vw);}
