@@ -331,9 +331,9 @@ function loadContent() {
     <div class="onhover">
         <h1 class="title">${project.fields.title}</h1>
         <p class="description">${descriptionText}</p>
-        <button><a href="${project.fields.link}" target="_blank">Öffnen</a></button>
+        <button><a href="${project.fields.link}" target="_blank" data-key="pk_live_51O6VRcFhhMLKWqtso0y6yyfPxYIK4xGxSO8Fwdr7dy666D8mkrzuUrXrQB19kphyoiUDkBUtJkR00K5wFsZIBQnA00n44Yfywl">Öffnen</a></button>
     </div>
-  `;
+  `
 
           // Добавляем проект в контейнер
           container.appendChild(projectDiv);
