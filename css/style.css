@@ -392,8 +392,8 @@ input:not(:placeholder-shown) {border-bottom-color:rgb(2, 70, 2); scale: 1.02; t
 
 .portfolio-nav.open {cursor: auto; filter:  contrast(1) grayscale(0);  transition: all 1s ease-out;
     /* Стили при ховере */
-    height: 30vw; min-height: 400px;
-    width: 27vw;
+    height: 30vw; min-height: 450px;
+    width: 35vw;
     margin: 0 3vw; 
     
 }
